@@ -1,0 +1,3331 @@
+# Developers' Bible
+
+
+# Laws, Fallacies, Biases
+@
+@ Psychology
+
+
+### 2 Pizza Rule of Team Sizes
+Limit the size of a team to what can be fed with 2 pizzas (8-9 people).
+
+Communication breaks down as the team gets larger.
+
+	6 people, 12 connections
+	12 people, 66 connections
+	50 people, 225 connections
+
+Prevents managers from falling into the trap that more people on a team is better.
+
+From Jeff Bezos, Amazon. No meeting should be larger than can be fed by 2 pizzas.
+
+
+### Benfords Law (or 1st Digit Law)
+No matter what it is, all numbers follow a standard distribution.
+
+From music to tax returns to the distribution of letters or words, they all follow this distribution.
+
+
+<#><b>Benford's Distribution<><>
+
+<indent><table><col><b>Number<><><col><b>Probability<><>
+<col> <>
+<col>1<><col>30.1%<>
+<col>2<><col>17.6%<>
+<col>3<><col>12.5%<>
+<col>4<><col>9.7%<>
+<col>5<><col>7.9%<>
+<col>6<><col>6.7%<>
+<col>7<><col>5.8%<>
+<col>8<><col>5.1%<>
+<col>9<><col>4.6%<><>
+...<>
+
+Wikipedia:
+<l>https://en.wikipedia.org/wiki/Benford%27s_law<>
+
+
+### Confirmation Bias
+The tendency to search for, interpret, favour, and recall information in a way that affirms one's prior beliefs or hypotheses.
+
+
+### Conway's Law
+Any piece of software reflects the organizational structure that produced it.
+
+or...
+
+If you have four teams working on a compiler, you will end up with a four pass compiler!
+
+
+### Conway's Law - Inverse Conway's Maneuver
+Purposely building an organizational structure to get to the target architecture.
+
+
+### Curse of Knowledge
+The tendency for people to fail to account for the fact that others don’t know the same things that they do.
+
+(Congitivie Bias)
+
+
+### Dunning-Kruger Effect
+
+Happens when an unskilled individuals suffer from illusory superiority, mistakenly rating their ability much higher than is accurate.
+
+This happens because of metacognitive inability of the unskilled to recognize their ineptitude. 
+
+Conversely, highly skilled individuals tend to underestimate their relative competence.
+- erroneously assuming that tasks which are easy for them are also easy for others.
+
+Opposite: Imposter Syndrome
+
+(Cognitive Bias)
+@
+@ Kruger
+
+
+### Egocentric Bias
+
+Wikipedia:
+<l>https://en.wikipedia.org/wiki/Egocentric_bias<>
+
+
+### Greenspun's Tenth Rule of Programming
+Any sufficiently complicated C or Fortran program contains an ad hoc, informally-specified, bug-ridden, slow implementation of half of Common Lisp.
+
+Can be applied to many languages.
+
+
+### Hofstadter's Law (Planning Fallacy)
+It always takes longer than you expect, even when you take into account Hofstadter's Law.
+
+
+### Hoot's Law
+“No matter how bad things are, you can always make them worse.”
+- Robert "Hoot" Gibson, Nasa
+
+
+### Hyrum's Law of APIs
+
+Given a sufficient number of users using an API,
+the API contract does not matter.
+All observabel behaviours of your system will be depended on by someone!
+
+
+### Illusion of Communication
+
+"The single biggest prroblem in communication is the illusion it took place"
+- Bernard Shaw
+@
+@ Conversation
+
+
+### Imposter Syndrome
+Happens when an individual doubts their accomplishments or talents and has a persistent internalized fear of being exposed as a "fraud".
+
+Opposite: Dunning-Kruger Effect
+(Cognitive Bias)
+
+
+### Law of Diffusion of Innovation
+
+<indent-half><table><col>2.5%<><col>Innovators<>
+<col>13.5%	<><col>Early Adopters<>
+<col>34%<><col>Early Majority<>
+<col>34%<><col>Late Majority<>
+<col>16%<><col>Laggard<><><>
+
+
+<image>Diffusion of Innovation - Distribution.png<>
+
+
+Tipping Point
+
+	15-18%
+
+	The point where something takes off.
+
+Innovators
+
+	Adventurous,
+	Interested In New Ideas
+	Willing To Take Rrisks
+
+Ealy Adoptes
+
+	Opinion Leaders
+
+	Enjoy Leadership Roles
+	Comfortable Adopting and Embracing New Ideas, Change
+
+Early Majority
+
+	Wouldn't Try Something
+	Until Someone Else Tries It First
+	Need Evidence of Benefit
+
+	Will Adopt New Ideas Before The Average Person.
+
+Late Majority
+
+	Skeptical of Change
+	Will Ontly Try Something After The Average
+
+Laggards
+
+	Touch Tone Phones
+	Only because they can't buy rotary phones
+
+
+Wiki:
+<l>https://en.wikipedia.org/wiki/Diffusion_of_innovations<>
+
+
+### Planning Fallacy
+We know everything always takes longer than expected; we just seem to forget … again and again.
+
+People underestimate the time needed to complete a task, despite knowledge that previous task had taken longer than planned.
+
+Backed up by studies.
+
+
+### Postel's Principle
+"Be conservative in what you send, be liberal in what you accept"
+
+Wiki:
+<l>https://en.wikipedia.org/wiki/Robustness_principle<>
+
+
+### Sunk Cost Bias
+Sticking to a project because of the previous investments in time, money or resources. A suck cost can not be recovered.
+
+
+### Survivor Bias
+
+Wikipedia:
+<l>https://en.wikipedia.org/wiki/Survivorship_bias<>
+
+
+### Thompson's Rule for First-Time Telescope Makers
+It is faster to make a four-inch mirror and then a six-inch mirror than to make a six-inch mirror.
+
+
+### Unix Philosophy
+
+· Write programs that do one thing and do it well.
+· Write programs to work together.
+· Write programs to handle text streams, because that is a universal interface.
+
+Follow Up Philosophy:
+
+· Make it easy to write, test, and run programs.
+· Interactive use instead of batch processing.
+· Economy and elegance of design due to size constraints.
+	("salvation through suffering")
+· Self-supporting system: all Unix software is maintained under Unix.
+
+Wiki:
+<l>https://en.wikipedia.org/wiki/Unix_philosophy<>
+
+
+# Code Smells
+
+
+
+## Code Smells - Categories
+
+
+
+### Code Smells - Categories - Summary
+
+Bloaters
+Change Preventers
+Couplers
+Dispensables
+Tool Abusers
+
+
+
+### Code Smells - Categories - Details
+
+
+
+#### Code Smells - Category - Bloaters
+
+Code, methods or classes that that have grown to a size that makes them hard to work with or hard to understand.
+
+
+Smells:
+
+	Long Method
+	Large Class
+	Data Clumps
+	Long Parameter List
+	Primitive Obsession
+
+
+
+#### Code Smells - Category - Change Preventers
+
+Changes  one area force code changes in other areas.
+
+This makes development much more difficult, time consuming, and expensive.
+
+
+Smells:
+
+	Divergent Change
+	Shotgun Surgery
+	Parallel Inheritance Hierarchies
+	Responsibility Overload				<#>(Mine)<>
+
+
+
+#### Code Smells - Category - Couplers
+
+Code that has excessive coupling between classes.
+
+
+Smells:
+
+	Feature Envy
+	Inappropriate Intimacy
+	Message Chains
+	Middle Man
+
+
+
+#### Code Smells - Category - Dispensable
+
+Code that is pointless and unneeded.
+
+Removing these will make the code cleaner, more efficient and easier to understand.
+
+
+Smells:
+
+	Lazy Class
+	Speculative Generality
+	Data Class
+	Duplicated Code
+
+	Dead Code
+	Comments
+
+
+
+#### Code Smells - Category - Tool Abusers
+
+These smells implement programming principles incorrectly or incompletely.
+
+
+Smells:
+
+	Switch Statements
+	Refused Bequest
+	Alternative Classes w/ Different Interfaces
+	Temporary Field
+
+	If Bomb						<#>(Mine)<>
+	Misdirection					<#>(Mine)<>
+
+
+
+#### Code Smells - Category - Me
+
+Personal smells I see often.
+
+
+Smells:
+
+	Misdirection
+	Responsibility Overload			<#>(Change Preventer)<>
+	Coding the end in the beginning	<#>(Inappropriate intimacy)<>
+
+	How, Not Why					<#>(Change Preventer)<>
+	If Bomb							<#>(Change Preventer, Tool Abuser)<>
+
+
+
+#### Code Smells - Category - Others
+
+Entanglement / Ripple Effect	(Change Preventer) (Too Much Coupling)
+
+
+
+## Code Smells - Details
+
+
+
+### Code Smell - Data Class
+A class that contains only fields and field manipulator methods (e.g. getters and setters).
+
+These are containers used by other classes. They don't have any additional functionality and can't operate on the data themselves.
+
+
+Type: Dispensable
+@
+@ Dispensable
+
+
+
+### Code Smell - Data Clumps
+2 or more variables traveling together.
+
+
+Type: Bloater
+@
+@ Bloater
+
+
+
+### Code Smell - Divergent Change
+A single functional change needs to be implemented in multiple places.
+
+
+Type: Change Peventer
+@
+@ Change Preventer
+@ Two, Several
+
+
+
+### Code Smell - Feature Envy
+A function or class references too many fields in another class to make some calculation.
+
+
+Example:
+Creating a one line address by calling all the address fields in the address object. In this case, the address object should expose a single <c>getCompleteAddress()<> function.
+
+
+Type: Coupler
+@
+@ Coupler
+
+
+### Code Smell - Inappropriate Intimacy
+One class uses the internal fields or methods of another class.
+
+
+Type: Coupler
+@
+@ Coupler
+
+
+
+### Code Smell - Lazy Class
+This class doesn't do enough to justify its existence.
+
+
+Type: Dispensable
+@
+@ Dispensable
+
+
+
+### Code Smell - Long Method
+The method is too long.
+
+It is hard to reason about and safely make changes a method that does a lot.
+
+Short methods outlive longer ones by a large margin.
+Short = 5 or less. 1 line methods are excellent.
+
+
+Type: Bloater, Change Preventer
+@
+@ Bloater, Change Preventer
+
+
+
+### Code Smell - Parallel Inheritance Hierarchies
+Creating a subclass in one hierarchy forces a creation of a subclass in a different hierarchy.
+
+
+Type: Change Preventer
+@
+@ Change Preventer
+
+
+
+### Code Smell - Primitive Obsession
+Where program relies on primitives instead of small objects for simple tasks (Strings for phone numbers, decimal for currency, etc., dates for date range), constants for coding information, string constants for field names, etc.
+Fix: Replace Data Value with Object.
+
+
+Type: Bloater
+
+
+See Also: Stringly Typed
+@
+@ Bloate, Stringly Typed
+
+
+
+### Code Smell - Refused Bequest
+Subclass refuses to properly override inherited method and throws "not implemented" exception.
+
+
+Type: Tool Abuser
+@
+@ Tool Abuse
+
+
+
+### Code Smell - Speculative Generality
+This code is created "just in case". It is designed to support an anticipated feature that never gets implemented.
+
+
+Type: Dispensable
+@
+@ Dispensable
+
+
+
+### Code Smell - Switch Statements
+Conditionals. The switch or if statements are too complex, hard to understand or error prone.
+
+
+Type: Tool Abuser
+@
+@ Tool Abuser
+
+
+
+### Code Smell - Temporary Field
+These are fields that get their values under certain circumstances. Otherwise, they are empty. Should probably be a method.
+
+
+Type: Tool Abuser
+@
+@ Tool Abuser
+
+
+
+## Code Smells - Mine - Details
+
+
+
+### Code Smell - How, Not Why (Mine)
+The code is named and designed based on how it is done, not why it is done.
+
+
+Type: Change Preventer
+
+<#>(Mine)<>
+
+
+
+### Code Smell - If Bomb (Mine)
+Defined by a long and complicate series of nested if statements.
+
+If statements should be limited.
+2 if statements is too many in a method.
+Even 1 is questionable.
+
+
+Type: Bloater, Tool Abuser
+@
+@ Bloater, Tool Abuser
+
+
+
+### Code Smell - Misdirection (Mine)
+When a function or class indicates it does one thing when it does something else entirely.
+
+
+Type: Tool Abuser
+
+
+<#>Mine<>
+@
+@ Tool Abuser
+
+
+
+### Code Smell - Responsibility Overload (Mine)
+Where a class or function does too many things. Violates single responsibility.
+
+
+Type: Change Peventer
+@
+@ Change Preventer
+
+
+
+# Documentation
+
+
+## Documentation - Goals
+
+Simple Things Should Be Simple To Find
+
+Retrieval Time = O(1) (1st Order Retrieval)
+
+· Can I find it fast?
+· Do I have to search through documents?
+
+
+#### Documentation - Which Type?
+
+'What does this do?'		Reference
+						Explanation
+
+'How do I do this?'			Tutorial
+						Tutorial / Quick Start
+						How-To Guide
+
+'How does it work?'			Explanation
+
+
+#### Documentation - Don'ts
+
+Complete Documentation ≠ Great Documentation
+
+
+## Document Types
+
+
+### Documentation Types - Summary
+
+Tutorial
+Quick Start
+How-To Guide
+Explanation
+Reference
+
+
+
+### Document Types - Details
+
+
+
+#### Document Type - Tutorial
+Allows the newcomer to get started.
+
+Is learning-oriented.
+
+Analogy:
+
+	Teaching a small child how to cook
+
+
+
+#### Document Type - Tutorial / Quick Start
+Gets the user up and running with a minimum number of steps.
+
+Is learning-oriented.
+
+Goal: 
+
+	Get running in 10 minutes. 2 minutes is even better.
+
+
+
+#### Document Type - How-to Guide
+Shows how to solve a specific problem in a series of steps.
+
+Is goal-oriented.
+
+Analogy:
+
+	A recipe in a cookery book.
+
+Examples:
+
+	Cheatsheet
+	'Cook' Book
+
+
+
+#### Document Type - Explanation
+Provides an explanation, background, and context.
+
+Is understanding-oriented.
+
+Analogy:
+
+	An article on culinary social history
+
+
+
+#### Document Type - Reference
+Describes the machinery.
+It is accurate and complete (exhaustive).
+
+Is information-oriented.
+
+Analogy:
+
+	A Reference Encyclopaedia Article
+
+
+
+# Issue Categorization
+
+Issues can be organized in one of many different ways. This is one such system. Use as a starting point and modify as needed.
+
+
+### Issue Priority
+
+1	Critical		Catastrophic impact on business operations.
+2	Severe		Significant impact on business operations.
+3	Moderate		Slight business impact.
+4	Minor		No impact on business operations.
+
+
+##### Priority - Critical
+Catastrophic impact on business operations.
+No workaround available.
+
+
+Examples:
+
+Live Site down.
+Unable to search and browse products on a live site.
+Unable to take orders.
+Security issues.
+
+
+##### Priority - Severe
+Significant impact on business operations.
+(A workaround may be available).
+
+
+Examples:
+
+More than 2 outages in a 24 hour period.
+Unable to send / receive emails.
+
+
+##### Priority - Moderate
+Slight business impact. Probably has a workaround.
+
+
+Examples:
+
+Web analytics not functioning properly.
+Can't upload images.
+
+
+##### Priority - Minor
+No impact on business operations.
+
+
+Examples:
+Product functionality enhancement.
+Basic Configuration questions.
+Documentation update.
+
+
+### Issue Status
+Used to understand where in the development process an issue is.
+
+Open
+Pending Review
+In Progress
+Pending Test
+In Test
+Pending Release
+Closed
+
+<!>Blocked<>
+
+
+##### Status - <!>Blocked<#>
+The issue is blocked by some situation and can't progress... Help!
+
+Use this to draw attention to an issue that needs help.
+
+
+##### Status - Closed
+The issue is done.
+
+
+##### Status - In Progress
+The issue is currently being worked on. For software, this implies the issue is in development.
+
+
+##### Status - In Test
+The issue is being tested.
+
+
+##### Status - Open
+The issue has been created but nobody is working on it.
+
+
+##### Status - Pending Release
+The issue is complete and is ready to be deployed to production.
+
+
+##### Status - Pending Review
+The issue requires someone to review it before a decision can be made on what to do next.
+
+
+##### Status - Pending Test
+The issue has been committed to the repo and is ready for test.
+
+
+### Issue Types
+
+Feature
+Bug
+Support
+Question
+
+
+#### Issue Type - Bug
+This is a bug and should be fixed.
+
+
+#### Issue Type - Feature
+This is a new feature or enhancement.
+
+
+#### Issue Type - Question
+This is a simple question that needs to be answered.
+
+
+#### Issue Type - Support
+This is a production support issue.
+
+
+# People
+
+
+### Alan Kay
+
+Computer scientist who pioneered object oriented programming (OO), graphic user interfaces (GUI).
+He created Smalltalk
+
+Worked at PARC, Xerox.
+
+Wiki:
+<l>https://en.wikipedia.org/wiki/Alan_Kay<>
+
+
+### Dennis Ritchie
+
+Created C in the early 1970s.
+
+Worked at Bell Labs.
+
+
+### Dieter Rams
+
+Industrial Designer
+Closely accosted with Braun Company, Functionalist Architecture.
+"Less but better"
+
+
+#### 10 Principles For Good Design
+
+##### Is Innovative
+
+The possibilities for progression are not, by any means, exhausted. Technological development is always offering new opportunities for original designs. But imaginative design always develops in tandem with improving technology, and can never be an end in itself.
+
+##### Makes a product useful
+
+A product is bought to be used. It has to satisfy not only functional, but also psychological and aesthetic criteria. Good design emphasizes the usefulness of a product whilst disregarding anything that could detract from it.
+
+##### Is aesthetic
+
+The aesthetic quality of a product is integral to its usefulness because products are used every day and have an effect on people and their well-being. Only well-executed objects can be beautiful.
+
+##### Makes a product understandable
+
+It clarifies the product’s structure. Better still, it can make the product clearly express its function by making use of the user's intuition. At best, it is self-explanatory.
+
+##### Is unobtrusive
+
+Products fulfilling a purpose are like tools. They are neither decorative objects nor works of art. Their design should therefore be both neutral and restrained, to leave room for the user's self-expression.
+
+##### Is honest
+
+It does not make a product appear more innovative, powerful or valuable than it really is. It does not attempt to manipulate the consumer with promises that cannot be kept.
+
+##### Is long-lasting
+
+It avoids being fashionable and therefore never appears antiquated. Unlike fashionable design, it lasts many years – even in today's throwaway society.
+
+##### Is thorough down to the last detail
+
+Nothing must be arbitrary or left to chance. Care and accuracy in the design process show respect towards the consumer.
+
+##### Is environmentally friendly
+
+Design makes an important contribution to the preservation of the environment. It conserves resources and minimizes physical and visual pollution throughout the lifecycle of the product.
+
+##### Is as little design as possible
+
+Less, but better - because it concentrates on the essential aspects, and the products are not burdened with non-essentials. Back to purity, back to simplicity.
+
+
+
+### Fred George
+
+Proponent of coding for change and very small functions and classes.
+
+The idea is that making functions very small, allows for rapid change and accelerates development.
+
+Co-founder of Outpace Systems.
+
+
+
+### James Gosling
+
+Created Java
+
+Wiki:
+<l>https://en.wikipedia.org/wiki/James_Gosling<>
+
+
+
+### Josh Block
+
+Software engineer who worked for Sun Systems and Google.
+He lead the design of numerous java platform features.
+- Collections, Math, Assert mechanism.
+
+Wrote "Effective Java"
+
+Quote: "Clever is clever but rarely useful"
+
+
+
+### Ken Beck
+
+Created JUnit.
+- Maintains it.
+- Doesn't get paid for it.
+
+Started out in Small Talk Language
+- Compared two teams (Fortran vs C (See Below).
+- - created small testing framework
+ Moved to Java when Small Talk waining.
+- Migrated / created testing framework.
+- Turned into JUnit.
+- Released to friends.
+- - Response - best thing ever.
+- - came back and said solved problems they were having trouble identifying.
+
+Fortran Compiler
+- Team: 6-8 people
+- Lots of problems.
+
+C Compiler
+- 1 Person
+- Faster, More Creative, Lower Stress, Relaxed
+- Created More Value
+- Wrote 5 lines of test code for every line of code.
+
+Fortrans Guys
+- were the opposite.
+- Struggling and stressed.
+- Less productive.
+
+
+
+### Kevlin Henney
+
+Charismatic speaker on software topics.
+
+Example:
+"Seven Ineffective Coding Habits of Many Programmers"
+
+
+
+### Larry Teslar
+
+Worked at Xerox PARC.
+Created the idea of modeless software.
+Created copy, paste.
+Previously, software would switch modes to do different things (think vi).
+
+Quote "Don't Mode Me In"
+License Plate "NO MODES"
+
+Wiki:
+<l>https://en.wikipedia.org/wiki/Larry_Tesler<>
+
+
+
+### Linus Trovalds
+
+Finnish software engineer now in the States.
+Developed the Linux Kernel.
+Outspoken and arrogant but also brilliant.
+
+@ Linux
+
+
+
+### Martin Fowler
+
+Computer Scientist for Thought Works
+
+
+
+### Robert Martin
+
+Defined SOLID principle.
+
+Famous speaker. Gives insightful talks on software development.
+
+AKA: Uncle Bob
+@
+@ Uncle Bob
+
+
+
+# Codecs - Video
+
+
+
+### H.264 / AVC (Advanced Video Coding)
+An MPEG-4 video compression standard.
+
+It is the most popular video codec (90% of market).
+It is a (DCT) based encoding system that uses blocks and compensates for motion.
+
+<*>8-bit Codec
+High Compression Ratio
+CPU and GPU Intensive
+Process Groups of Pictures Together
+Supports MP4, M4P, M4V<>
+
+
+Wiki:
+<l>https://en.wikipedia.org/wiki/Advanced_Video_Coding<>
+@
+@ x264 h264, openh264
+
+
+
+
+### H.265 / HEVC (High Efficiency Video Coding)
+
+
+Wiki:
+<l>https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding<>
+@
+@ x265 h265
+
+
+
+### H.266 / VVC (Versatile Video Coding)
+
+
+Wiki:
+<l>https://en.wikipedia.org/wiki/Versatile_Video_Coding<>
+@
+@ x266 h266
+
+
+
+### ProRes
+Apple's proprietary video format.
+
+It is a high quality lossy compression format and supports up to 8k video.
+It is based on discrete cosine transformation (DCT).
+
+<*>10-bit Codec
+Low Compression Ratio
+Low CPU, GPU Usage
+Supports MOV<>
+
+
+Wiki:
+<l>https://en.wikipedia.org/wiki/Apple_ProRes<>
+
+
+
+# Standards
+
+
+### ISO-8601 Date Format
+
+Wiki:
+<l>https://en.wikipedia.org/wiki/ISO_8601<>
+
+'T' - Indicator where time part starts
+'Z' - UTC. An abbreviation for +00:00
+
+
+
+#### ISO-8601 Date
+
+<cb>YYYY-MM-DD
+YYYYMMDD<>
+
+<cb>2001-01-01
+20010101<>
+
+
+
+#### ISO-8601 Year / Week
+
+<cb>YYYY-'W'WW
+YYYY-'W'WW'-D
+
+YYYY'W'WW
+YYYY'W'WWD<>
+
+<cb>2001-W01
+2001-W01-1
+
+2001W01
+2001W011<>
+
+
+
+#### ISO-8601 Time
+
+<cb>hh:mm
+hh:mm:ss
+hh:mm:ss.sss
+
+'T'hhmm
+'T'hhmmss
+'T'hhmmss.sss<>
+
+<cb>23:59
+23:59:58
+23:59:58.123
+
+01:01:01.001
+
+T2359
+T235958
+T235958.123<>
+	
+All are zero padded.
+'T' - Indicator where time part starts
+
+
+
+#### ISO-8601 Date Time
+
+<cb>YYYY-MM-DD'T'hh:mm:ss
+YYYY-MM-DD'T'hh:mm:ssZ
+
+YYYYMMDD'T'hhmmss
+YYYYMMDD'T'hhmmssZ<>
+
+<cb>2001-01-01T01:01:01
+2001-01-01T01:01:01-05:00
+
+20010101T010101
+20010101T010101-05:00<>
+
+T is required.
+It is used as a delimiter.
+All numbers are zero padded.
+
+'T' - Indicator where time part starts
+'Z' - UTC. An abbreviation for +00:00
+@
+@ datetime, date and time
+
+
+
+# Standard Resolutions
+
+
+
+
+### Resolution - TV
+
+<card>TV - NTSC				525 lines
+						720 x 486		0.33 mp		~3:2 (?)
+
+TV - PAL					720 x 576		0.40 mp		5:4
+
+540p					960 x 540
+720p					1280 x 720
+
+HDTV / 1080p				1920 x 1080		2.0 mp		16:9
+HDTV					1920 x 1200		2.27 mp		16:10
+
+2K						2048 x 1080		2.1 mp		1.9:1
+
+4K / UHD					3840 x 2160		7.91 mp		16:9
+4K						3840 x 2400		8.79 mp		16:10
+
+Movie 4K					4096 x 2160		8.4 mp<>
+
+
+
+### Resolution - Macs
+
+<card>Macbook Pro 13”			2560 x 1600		3.9 mp		16:10	220 ppi
+Macbook Pro 15”			2880 x 1800		4.9 mp		16:10	227 ppi
+
+Macbook Pro 15” - Camera	720p<>
+
+
+
+### Resolution - iPhone / iPad
+
+<card>
+iPad Air / Air 2				2048 x 1536		3.0 mp		4:3		264 ppi
+
+iPhone 5s				1136 x 640		0.7 mp		16:9		326 ppi
+
+iPhone 5s - Camera Front	1280 x 960		1.17 mp		4:3
+						<s>720p Video<>
+
+iPhone 5s - Camera Rear	3264 x 2448		8 mp		4:3
+						<s>HD Video<>
+
+iPhone 6 - Screen			1334 x 750		0.95 mp		16:9		326 ppm
+
+iPhone 6 - Camera Front	1280 x 960		1.17 mp		4:3
+						<s>720p Video<>
+
+iPhone 6 - Camera Rear		3264 x 2448		8 mp		4:3
+						<s>HD Video<><>
+
+
+
+# Reference
+
+
+## Lines of Code
+
+Code Base Sizes (2014):
+<image "Chart - Code Base Sizes.png">
+
+
+
+## Web Frameworks
+
+<image "Chart - Web Frameworks - Timeline.png">
+
+Source:
+<l>https://github.com/mraible/history-of-web-frameworks-timeline<>
+
+
+
+# Acronyms
+
+
+#### 2FA
+Two Factor Authentication
+
+
+#### ACID
+Atomicity, Consistency, Isolation, Durability
+
+
+#### ACL
+Access Control List
+
+
+#### AES
+Advanced Encryption Standard
+
+
+#### ALM
+Application Lifecycle Management
+
+
+
+#### ANSI
+American National Standards Institute
+
+
+#### AOP
+Aspect-oriented Programming
+
+
+
+#### ASCII
+American Standards Code for Information Interchange
+
+
+#### AST
+Abstract Syntax Tree
+
+
+#### BASE
+Basically Available, Soft state, Evaluation (NoSql) (See: Eventual Consistency)
+
+
+#### BDD
+Behaviour Driven Development
+
+
+#### BI
+Business Intelligence
+
+
+#### BO
+Business Object
+
+
+#### BOM
+Byte Order Marker
+
+
+#### BPEL
+Business Process Execution Language (Stored as XML)
+
+
+#### BPM
+Business Process Manager
+
+
+#### BPMN
+Business Process Model And Notation
+
+
+#### CAP
+<b>C<>onsistency, <b>A<>vailability, <b>P<>artition Tolerance
+
+See: CAP Theory (below)
+
+
+#### CAPTCHA
+<b>C<>ompletely <b>A<>utomated <b>P<>ublic <b>T<>uring test to tell <b>C<>omputers and <b>H<>umans <b>A<>part
+
+
+#### CAS
+Compare And Swap
+
+
+#### CI
+Continuous Integration
+
+
+#### CICD
+Continuous Integration Continuous Delivery
+
+
+#### CDN
+Content Delivery Network
+
+
+#### CLR
+Common Language Runtime
+
+
+#### COCOMO
+Constructive Cost Model
+
+
+#### CORS
+Cross-origin Resource Sharing
+
+
+#### CQRS
+Command Query Responsibility Segregation
+@
+@ Related to event sourcing.
+
+
+#### DAG
+Directed Acyclic Graph
+
+
+#### DBAL
+Database Abstraction Layer
+
+
+
+#### DCT
+Discrete Cosine Transformation
+
+(A lossy video compression algorithm)
+
+
+#### DRY
+Don't Repeat Yourself
+
+
+#### DSL
+Domain Specific Language
+
+
+#### DTO
+Data Transfer Object
+
+
+#### EOF
+End of File
+
+
+#### EOL
+End of Line
+
+
+#### ERP
+Enterprise Resource Planning
+
+
+#### ETL
+Extract, Transform, Load
+
+
+#### FAAS
+Function As A Service
+
+
+#### GA
+General Availability
+
+
+#### GPL
+General Purpose Language
+
+
+#### GRASP
+General Responsibility Assignment Software Principles
+
+
+#### HAL
+Hyperlink Application Language
+
+
+#### HAL 9000
+HAL 9000, the fictional artificial intelligent computer from the movie '2001, A Space Odyssey'.
+
+Named by taking IBM and changing each letter to the one before in the alphabet.
+
+
+#### HDFS
+Hadoop Distributed File System
+
+
+#### HOCON
+Human-Optimized Config Object Notation (a superset of JSON)
+
+
+#### IAAS
+Infrastructure as a Service
+
+
+#### IPC
+Inter-process Communication
+
+
+#### ISO
+International Organization for Standardization
+
+
+#### JSON
+JavaScript Object Notation
+
+
+#### LLVM
+Low Level Virtual Machine
+
+
+#### LRU
+Least Recently Used (Caches)
+
+
+#### LUDA
+Listen, Understand, Decision, Action
+
+
+#### MEAN
+MEAN Stack (MongoDB, Express.js, Angular, Node.js)
+
+
+#### MOM
+Message Oriented Middleware
+
+
+#### MPP
+Massively Parallel Processing
+
+
+#### MQTT
+Message Queue Telemetry Transport
+
+
+#### MRU
+Most Recently Used (Caches)
+
+
+#### MTBF
+Mean Time Between Failures
+
+
+#### MTTF
+Mean Time To Failure
+
+
+#### MTTR
+Mean Time To Repair
+
+
+#### MVC
+Model View Controller
+
+
+#### MVVM
+Model View ViewModel
+
+
+#### NL
+Newline
+
+
+#### NPM
+Node Package Manager
+
+
+#### OLAP
+Online Analytical Processing
+
+
+#### OLTP
+Online Transaction Processing
+
+
+#### OO
+Object Oriented
+
+
+#### OSS
+Open-source Software
+
+
+#### OTP
+Open Telecom Platform
+
+
+#### PAAS
+Platform As A Service
+
+
+#### RBAC
+Role-based Access Control
+
+
+#### RDD
+Resilient Distributed Datasets
+
+
+#### REPL
+Read Evaluate Print Loop
+
+
+#### REST
+Representational State Transfer (ReST)
+
+
+#### RRD
+Round Robin Database
+
+
+#### RTFM
+Read The Fucking Manual / Man Page
+
+
+#### RTM
+Release To Manufacturing
+
+
+#### SAAS
+Software as a Service
+
+
+#### SAML
+Security Assertion Markup Language
+
+
+#### SOA
+Service-oriented Architecture
+
+
+#### SOAP
+Simple Object Access Protocol
+
+
+#### SOLID
+Single Responsibility, Open / Closed, Liskov Substitution, Interface Segregation, Dependency Injection
+
+
+#### SRP
+Single Responsibility Principle
+
+
+#### TDD
+Testing Driven Development
+
+
+#### TOTP
+Time-based One-time Password (Algorithm)
+
+
+#### TTL
+Time To Live (Caching)
+
+
+#### UTSL
+Use The Source Luke (where the source is the best documentation)
+
+
+#### VO
+Value Object
+
+
+#### WSDL
+Web Service Definition Language
+
+
+#### XML
+Extensible Markup Language
+
+
+#### ELK
+ElasticSearch, Logstash, Kibana
+(Now Elastic Stack)
+
+
+#### HDFS
+Hadoop Distributed File System
+
+
+#### MapR
+MapReduce, The data processing framework of Hadoop
+
+
+#### YARN
+Yet Another Resource Negotiator
+
+
+# Terms
+
+
+### Abstraction
+The separation of the external interface from the internal implementation.
+
+
+### Access Control List
+A list of permissions attached to an object (especially in a file system). It defines whether a user, group or system have access to the object and what operations they are allowed to preform.
+Alternative: Role-based Access Control (RBAC)
+
+
+### Accessors
+Methods that access class properties. Ex: Java bean getters and setters.
+
+
+### ACID (Atomicity, Consistency, Isolation, Durability)
+Properties that guarantee a transaction is processed reliably (especially database transactions). In database terms, a single logical operation on data is a transaction.
+Atomic	- A transaction is all or nothing.
+Consistency	- A transaction will bring the system (database) from one valid state to another.
+Isolation	- Operations run concurrently should have the same effect as running serially one after another.
+Durability	- Once a transaction is committed, it will remain so. It will survive crashes, reboots, etc.
+
+
+### Advice
+Aspect programming feature (AOP) where a function modifies another function while the other is running. The advice function is applied at a given join point.
+
+
+### Algebraic Data Type
+A kind of composite type.
+Contains two types: Sum Type, Product Type
+
+
+### Algebraic Data Type - Sum Type
+An item is a variation of something. It is one of a limited set.  A is a B or A is a C (variants).
+eg: User is logged in OR anonymous
+
+
+### Algebraic Data Type - Product Type 
+An item contains one or more items. A has a B and a C (contains fields).
+eg: Logged in user has email address AND name.
+
+
+### Algorithm
+Precisely stated set of instructions.
+Procedure always finishes.
+Can be proven to work for all cases.
+
+
+### Auto Boxing
+The automatic conversion of primitive types into their representative classes and back.
+
+
+
+### Base36
+
+A binary to text encoding scheme.
+
+
+Characters:
+
+<cb>0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ<>
+
+Wiki:
+<l>https://en.wikipedia.org/wiki/Base36<>
+@
+@ Base Encoding, Encoder, Decoder, Decoding, Text To From Binary, 36
+
+
+
+### Base57
+
+A binary to human readable text encoding scheme.
+
+Uses easy to read characters.
+Includes i (lower case i), o (lower case o), L (capital l).
+Excludes 0 (zero), 1 (one), I (capital i), l (lower case L), O (capital o).
+
+<!>Why no 0, 1??? Why have i, o instead????<>
+
+
+Characters:
+
+<cb>23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz<>
+
+Excluded:
+
+<cb>0, 1		<#>Zero, One<>
+I			<#>Upper Case I<>
+l			<#>Lower Case L<>
+O			<#>Upper Case O<><>
+
+@
+@ Base Encoding, Encoder, Decoder, Decoding, Text To From Binary, 57
+
+
+
+### Base57-Tim
+
+A binary to human readable text encoding scheme.
+
+Uses easy to read characters.
+Includes 0, 1, L (capital l).
+Excludes upper case letters i, o and lower case i, l, o.
+
+
+Characters:
+
+<cb>0123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz<>
+
+Excluded:
+
+<cb>
+i, I		<#>Upper or Lower Case I<>
+l			<#>Lower Case L<>
+o, O		<#>Upper or Lower Case O<><>
+@
+@ Base Encoding, Encoder, Decoder, Decoding, Text To From Binary, 57
+
+
+### Base58
+
+A binary to human readable text encoding scheme.
+
+Uses easy to read characters.
+Includes 1 (one), i (lower case i), o (lower case o), L (capital l).
+Excludes 0 (zero), I (capital i), l (lower case L), O (capital o).
+
+
+Characters:
+
+<cb>123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz<>
+
+Excluded:
+
+<cb>0			<#>Zero<>
+I			<#>Upper Case I<>
+l			<#>Lower Case l<>
+O			<#>Upper Case O<><>
+@
+@ Base Encoding, Encoder, Decoder, Decoding, Text To From Binary, 58
+
+
+
+### Base62
+
+A binary to text encoding scheme.
+
+Uses 62 characters to represent binary data.
+
+Characters:
+
+<cb>0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz<>
+
+Wiki:
+<l>https://en.wikipedia.org/wiki/Base62<>
+@
+@ Base Encoding, Encoder, Decoder, Decoding, Text To From Binary, 62
+
+
+
+### Base64
+
+A binary to text encoding scheme.
+
+Each character represents 6 bits of data.
+Every 3 bytes are represented by 4 characters.
+Uses radix-64 representation.
+
+Characters:
+
+<cb>0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+/<>
+
+Wiki:
+<l>https://en.wikipedia.org/wiki/Base64<>
+@
+@ Base Encoding, Encoder, Decoder, Decoding, Text To From Binary, 64
+
+
+
+### Behaviour Driven Development (BDD)
+Specifies the tests to be used in Test Driven Development(TDD) as TDD does not state the form the unit tests should be in. BDD states that the tests must be defined in terms of desired behavior (derived from user stories).
+See also: Testing.Help
+
+
+### Big O Notation
+
+Used to classify algorithms by defining how efficiently they perform in relation to their input size especially for large sizes.
+
+
+<b>O Notation In order of efficiency (best to worst):<>
+
+O(1)			Completes in one iteration. Unrelated to input size.
+O(log n)		Completes in log n iterations.
+O(n)			Completes in n iterations.
+O(n log n)	Completes in n log n iterations.
+O(n^2)		Completes in n squared iterations.
+O(n!)		Completes in n factorial iterations.
+
+
+Wikipedia: <l>https://en.wikipedia.org/wiki/Big_O_notation<>
+
+See Also: Time Complexity
+
+@ Runtime
+@ big-o-notation, o-notation
+
+
+
+### Bounded Context
+A bounded context is a way of breaking down and grouping business functionality. It is larger than one entity but smaller than a monolith. Use ubiquitous language used by the business team to define the context. Includes entities, command messages and event messages.
+Relates to: Domain Driven Design
+
+
+### Bracket Types
+
+( )	Round		or 'parentheses'
+[ ]	Square		or 'brackets'
+{ }	Curly		or 'braces'
+\< >	Angle
+
+
+### Brownfield
+A brownfield project / application is one that is developed in the presence of an existing (legacy) system/project/application. The new application must take into account and work with the system already in place.
+
+
+### Business Process Manager
+
+
+### Byte Order (Numeric)
+
+Big Endian (most significant byte first)
+Little Endian (least significant byte first)
+
+
+### Byte Order - Endian
+The byte order of numbers.
+
+Most common types are Big Endian, Little Endian (See above, below).
+ARM processors can switch between big and little endian.
+
+
+### Byte Order - Big Endian
+Byte order where the highest (most significant byte) goes first.
+Examples: Networks, IPv4, IPv6, TCP, UDP
+
+
+### Byte Order - Little Endian
+Byte order where the lowest (least significant byte) goes first.
+Examples: Intel x86, Z80, Atmel, Arduino
+
+
+### Byte Order Marker (Character Sets)
+An optional marker used in unicode files. It resides in the 1st few characters and indicates byte order (big-endian or low-endian). See specific unicode encoding schemes for actual characters.
+FE FF = Big Endian (high order byte first)
+FF FE = Little Endian  (low order byte first)
+See Also: character.help.
+
+
+### Business Object
+An object that contains data but also methods to change that data.
+
+
+### CAP Theorem
+States that it is impossible for a distributed database to guarantee all three of Consistency, Availability, (Network) Partition Tolerance.
+
+In reality, when there are partitions, you must choose on a spectrum between consistency or availability in the event of a failure. With no failure, you can have both consistency and availability.
+
+
+<b>Consistency<>
+Every read receives the most recent write or an error.
+
+<b>Availability<>
+Every request receives a response. Does not guarantee that it contains the most recent write/version.
+
+<b>Partition Tolerance<>
+The system continues to operate despite arbitrary network partitioning/split due to network failures.
+
+Also Called: Brewer's Theorem.
+
+@ Brewers
+
+
+### Case
+Defines forms of uppercase, lower case letters in words and the word separators as used in programming.
+
+@ Text, Word
+
+
+#### Case Types
+
+Upper
+Lower
+Camel
+Pascal / Title
+
+Snake / Joined
+Hyphen / Kebab / Lisp
+
+
+#### Case - Upper Case	
+
+<c><v>UPPERCASE<><>
+
+
+All letters are UPPER CASE.
+
+
+#### Case - Lower Case	
+
+<c><v>lowercase<><>
+
+All letters are lower case.
+
+
+#### Case - Pascal / Title Case
+
+<c><v>TitleCase<><>
+
+All words have first letter in Upper Case.
+All other letters lower case.
+No space between the words.
+
+
+#### Case - Camel Case
+
+<c><v>camelCase<><>
+
+The first word is all lower case.
+The following words have upper case first letter, remaining lower case letters.
+No space between words.
+
+
+#### Case - Snake Case
+
+<c><v>snake_case<><>
+
+<c><v>Title_Snake_Case<><>
+<c><v>camel_Snake_Case<><>
+<c><v>lower_snake_case<><>
+<c><v>UPPER_SNAKE_CASE<><>
+
+
+All words separated with underscores ('_').
+
+
+#### Hyphen / Kebab / Lisp Case
+
+<c><v>hyphen-case<><>
+
+<c><v>Title-Hyphen-Case<><>
+<c><v>camel-Hyphen-Case<><>
+<c><v>lower-hyphen-case<><>
+<c><v>UPPER-HYPHEN-CASE<><>
+
+
+All words separated with a hyphen ('-').
+
+
+### Circuit Breaker
+A pattern for handling failed calls between microservices on a network. The circuit breaker sits between the calling client and the supplier. The circuit 'trips' after a certain thresh-hold (say number of failed requests). Software circuit breakers often protect against a range of errors.
+Tools: Netflix Hystrix
+
+
+### Class Inheritance Terms
+Superclass / subclass
+Base class / derived class
+
+
+### Closure
+Is a function that "closes over" the environment it was defined in. It has access to all the variables in that are in scope in that environment without having to explicitly have them passed in.
+
+
+#### CODEC
+Hardware or software that decodes a stream of data.
+For example codecs encode and decode video streams.
+
+Portmanteau of coder / decoder.
+
+
+### Cohesion
+Refers to the degree that elements of a module belong together. High cohesiveness lends to desirable traits such as robustness, reliability, reusability and understandability. Low cohesion lends to undesirable traits such as difficulty maintaining, testing and reusing code and difficulty understanding the code. Prefer high cohesion.
+
+
+### Command Query Responsibility Segregation
+A persistency pattern that allows information to be saved one way but read a different way. The two are broken into Command Model and Query Model, are separated in code, have different api interfaces and may or may not be implemented in different classes. Typically they are separated classes.
+USE WITH CAUTION: Many apps have gotten into trouble implementing this poorly. CRUD is more reliable for the majority of uses.
+
+
+### Compare And Swap (CAS)
+Achieves atomic synchronized data changes in a multithreading environment. Data is compared against the stored value, then updates the stored value only if they are the same. The operation fails if the compared values are different. This is done as an atomic operation and guarantees the new value is calculated on the most up to date information.
+
+
+### Component
+A piece of code that is independently replaceable and independently upgradeable.
+Eg: A library, a service.
+
+
+### Content Delivery Network (CDN)
+A globally distributed network of proxy servers deployed in multiple data centers. The purpose is to serve content to end users with high availability and high performance.
+
+
+### Contract First
+Refers to (web) service contracts where the service contract is defined first (say with a WSDL) and implemented in code afterwards (SOAP service). This is the opposite to Contract Last.
+
+
+### Contract Last
+Refers to (web) service contracts where the service is created first (say a SOAP service) and the contract created afterwards (WSDL).
+
+
+### Convention Over Configuration
+The use of programming convention to set up classes over the use of configuration files.
+
+
+### Covariant
+This implies that two classes are linked. A subclass or subtype. is covariant with its superclass or supertype.
+See also: Invariant, Liskov Substitution, Subtype Polymorphism (OO.Help)
+
+
+### Cross-origin Resource Sharing (CORS)
+A mechanism that allows a server to limit what other servers can access from its content.
+
+Can be controlled by content type, http verb, etc.. Installed as a security policy.
+
+
+### Currying
+The process of evaluating a function with multiple parameters one parameter at a time.
+
+After a parameter is evaluated, a new function is returned with 1 fewer parameters and so on until a value is returned. This allows values to be passed to a function at different times and still be able to evaluate the function.
+
+
+### Cyclomatic Complexity
+A metric used to measure program complexity.
+
+It measures the number of linearly independent paths in a program. It is measured by converting code flow into nodes and then measuring the number of node paths.
+cyclomatic
+
+Good		Cyclomatic Complexity \<= 10
+Occasionally	Cyclomatic Complexity \<= 15
+Bad			Cyclomatic Complexity > 15
+
+
+
+#### Cyclomatic Complexity - Calculation
+
+Scoring:
+
+	Construct 	Score 	Reasoning
+
+	if 			+1		An if statement is a single decision.
+	elif 			+1		The elif statement adds another decision.
+	else	 		+0		The else statement does not cause a new decision. The decision is at the if.
+	for	 		+1		There is a decision at the start of the loop.
+	while 		+1		There is a decision at the while statement.
+	except 		+1		Each except branch adds a new conditional path of execution.
+	finally 		+0		The finally block is unconditionally executed.
+	with 			+1		The with statement roughly corresponds to a try/except block.
+	assert 		+1		The assert statement internally roughly equals a conditional statement.
+	Comprehension 	+1	A list/set/dict comprehension of generator expression is equivalent to a for loop.
+	Boolean Operator 	+1	Every boolean operator (and, or) adds a decision point.
+
+Radix Formula:
+
+	MI = max[0, 100171 − 5.2 ln V − 0.23 G − 16.2 ln L + 50 sin(2.4 C √)) 171]
+
+Where:
+
+	V	= the Halstead Volume (see below);
+	G	= the total Cyclomatic Complexity;
+	L	= the number of Source Lines of Code (SLOC);
+	C	= the percent of comment lines (important: converted to radians).
+
+	LOC			= The total number of lines of code. It does not necessarily correspond to the number of lines in the file.
+	LLOC		= The number of logical lines of code. Every logical line of code contains exactly one statement.
+	SLOC		= The number of source lines of code - not necessarily corresponding to the LLOC.
+	Comments	= The number of comment lines. Multi-line strings are not counted as comment since, to the Python interpreter, they are just strings.
+	Multi		= The number of lines which represent multi-line strings.
+	Blanks		= The number of blank lines (or whitespace-only ones).
+
+
+
+### Data Lake
+A single store for all the data anyone in the organization might want.
+Stored in raw, unstructured form.
+
+Problems:
+Can be a dumping ground for data.
+The quality of the data can vary.
+
+Also Called (Sometimes): Data Swamp
+
+
+### Data Transfer Object (DTO)
+Is an object used to transfer data between different layers. It should contain no methods other than setters and getters and should not alter its internal contents.
+
+
+### Data Warehouse
+A single store for all the data anyone in the organization might want.
+
+Has a schema.
+Data is cleaned and organized into the schema.
+
+Problems:
+A single unified schema is impractical for anything but small organizations.
+The schema forces the creation of data models for each form of the data.
+Analytics requires each analysis to use it's own data model for every model.
+
+
+### Database Normalization
+The process of organizing a relational database to minimize data redundancy. There are different types from 1st normal form to 6th normal form and some extras. The higher the normal form, the more restrictions there are.
+
+
+### Database Normalization - 1st Normal Form
+All attributes are atomic (one attribute per field, no groups of values in one field).
+All records must have the same number of fields
+Every row should be unique	 (needs primary key)
+
+
+### Database Normalization - 2nd Normal Form
+Obey 1st Normal Form
+No partial key dependencies. A non key field must provide a fact about the key, the whole key and nothing but the key.
+
+Example: An item in a warehouse…
+Record details of a Warehouse Item in a record...
+
+- Take Warehouse Item -> Address.
+- Is a violation because...
+- Address is really a detail of Warehouse.
+- Which is only a subset of the Warehouse Item key.
+
+- Take Warehouse Item -> Count.
+- This is correct.
+- The Count relates directly to the Warehouse Part.
+
+"Every non key attribute is fully dependent on the primary key"
+
+
+### Database Normalization - 3rd Normal Form
+Obeys 2nd Normal Form
+
+- All non key attributes are not dependent on any other non-key attributes.
+- There should be no fields that do not relate directly to the key.	
+
+Ex: Teacher id, and teacher data living in a student-course table.
+- The teacher id con be there but the teacher data belongs in another table.
+
+
+### Declarative Programming
+A form of programming that expresses what the programming should do, not how to do it.
+
+
+### Dependency Injection
+Design pattern that implements inversion of control. It means to give an object its dependencies through a constructor or setters so that it doesn't have to know how to create them itself.
+Advantages: Makes dependencies clear, simplifies dependency management (by externalizing them), very easy to test.
+
+
+### Deployment - Blue / Green
+Deployment where updated servers are gradually swapped with older version servers.
+
+A deployment strategy for upgrarding server clusters where new versions are deployed live and traffic shifted over while keeping the old servers rurnning.
+Rollback is very easy in this setup
+
+In blue/green deployments both new and old servers may get requests.
+
+The new servers get a portion of the traffic.
+The new servers are monitored for any issues.
+If there is a problem, they are taken off line and the system continues as normal.
+
+Blue - Old Environment
+Green - New Environment
+
+Colours can be the other way around.
+@
+@ Blue-Green
+
+
+### Deployment - Red / Black
+Deployment technique where updated servers are switched over to immediately.
+
+Only one version of the servers runs at any one time.
+
+It only needs two sets of servers during the update. After the update, the old instances are removed saving on resources.
+
+When releasing an update...
+1. Deploy to a new group of servers.
+2. Start sending traffic to the new instances (running side by side with the current servers) (red/red).
+3. Disable traffic to current instances (red/black)
+> At this point rollback is easy if a problem is discovered.
+4. If all ok, delete current instances.
+
+Red - Running
+Black - Idle
+
+
+### Directed Acyclic Graph (DAG)
+A finite directed graph that has only one direction and contains no loops between graph nodes. This structure has great fault tolerant properties.
+Used By: Source Control Trees (Git)
+Used By: Apache Spark (Resilient Distributed Datasets (RDD)) 
+
+
+### Directory Service
+Also Called: Name Service
+Used for locating resources on a network. The resource name is stored in the directory service along with it's network address.
+
+
+### Documentation Comments
+Comments in code that document the code functionality. They can be exported to create API documentation.
+
+
+### Domain Driven Design
+Build services around domains of business.
+
+
+### Don't Repeat Yourself (DRY)
+A short saying to say that code that produces one function should never be repeated. If it is done twice, it should be extracted to a shared place and called from both places.
+
+
+### Duck Typing
+If it walks like a duck and quacks like a duck, it is a duck.
+
+Duck typing states that if the method exists, the object supports that action and you can invoke it.
+There is no type checking to see if the object type or superclass explicitly supports that method.
+This is typically used in dynamic languages.
+
+
+### Edit in Place
+A screen/web page that allows the user to edit the page in place.
+
+
+### End Point
+The entry point to a web service. The base url of a web service. A web service may have different end points for different protocols.
+
+
+### Entity
+Better Definition: An item that has an identity (typically defined by its id), not its properties. It's properties can change over time but it will alway have the same identity.
+An object that represents a business item. From Entity Relationship Diagram. Entities have relationships to other entities. In the software world, entities are generally mapped to database tables (eg: Java JPA class with @Entity annotation).
+
+
+### Entwinement
+Two items tied together when they should be separate (in code smell terms).
+
+
+### Epoch Time
+The time at Unix Time 0.
+
+January 1st, 1970 at 00:00:00 UTC.
+
+### Erasure
+The enforcement of types at compile time but removal of those enforcements in the runtime.
+Ex: Java Generics (type erasure).
+See also: Reification (opposite)
+
+
+### Error Handling - Checked Exceptions
+
+When TO use:		Checked Exceptions (2 Situations):
+						Expected But Unpreventable
+						Reasonable To Recover From
+
+When NOT TO use:	When the caller can not recover from the failure.
+
+Expected But Unpreventable: A case where something could happen to cause the operation to fail despite caller's best efforts. eg: Someone deleted the record as the caller tried to update it.
+
+Reasonable To Recover From: eg: User enters bad information. eg: The user tries to access a non-existent resource.
+
+Not Reasonable To Recover From: Programming bug. Log it and and wait for a developer to fix it.
+
+
+### Estimates
+Should be honest, accurate, but not make managers happy.
+
+Should be "I don't know" if you don't know. Otherwise should be a range.
+
+Best	95% chance of missing
+Worst	5% chance of missing
+Nominal	50% chance of missing
+
+
+### Esimate Formula
+
+Estimate Time
+	Best, Worst, Nominal
+
+Multiply by 6
+
+Calculate:
+
+	standard deviation = (worst - best) / 6
+	mean = (best + worst + 4 * nominal) / 6
+
+	project mean = sum (mean)
+	project standard deviation = square root (sum (standard deviation ^ 2))
+
+
+
+### Estimate - Computer Vision - 1966 Summer Project
+
+In 1966 Seymour Papert though computer vision would be a 'summer project' for some students. It wasn't...
+
+
+
+### Event Sourcing
+This pattern stores changes to an object as a sequence of events. This is opposed to the traditional way of updating an object to the latest state without history. This is a replacement for standard CRUD operations and often goes hand in hand with CQRS.
+Event sourcing implements reads and writes only, no updates or deletes.
+Good For:
+Auditing, Debugging, Historic State, Alternative State, In Memory Image
+Problem Areas:
+Developer Unfamiliarity, External Systems, Event Schema (changes over time), Identifiers
+
+
+### Event Sourcing - Action Types
+Command, Event, Query
+
+
+### Eventual Consistency (BASE)
+States that access to a piece of data in a distributed system will eventually return the latest value. This is true as long as there are no new updates. A system that has reached consistency is said to have 'converged'. This is a weak guarantee.
+In contrast to ACID/RDBMS.
+Uses: Optimistic Replication
+Also Called: BASE (Basically Available, Soft State, Evaluate Consistency)
+
+
+### Extract, Transform, Load
+A database process where data is extracted from one or more data sources, transformed to a particular form and then loaded into it's final target (database, or warehouse). Used especially into data warehouses.
+
+
+### Find What Varies and Encapsulate It
+Identify varying behaviour. Define the abstract class that allows for communication with objects that have one case of this behaviour.
+
+
+### Free Software
+Free as in free speech. Has 4 characteristics
+
+0 - Freedom to use the program
+1 - Freedom to modify the program
+2 - Freedom to share the program
+3 - Freedom to share modified versions of the software.
+
+
+### Function - Currying
+The process of applying some of the parameters to return a new function which takes the remainder functions. The returned function is called a partially applied function.
+
+
+### Functions - First Class Functions
+A language that supports first class functions, supports passing functions as parameters. Eg: Scala supports first class functions, Java does not.
+
+
+### Function - Higher Order
+A function that takes another function or returns another function.
+
+
+### Function - Partially Applied Function
+A function where some of the function parameters have been applied but not all of them.
+See also: Function - Currying
+
+
+### Function - Pure Function
+A function who's result depends only on its input values and who has no side effects.
+
+
+### Functional Programming
+The programming by evaluating mathematical functions. Functional programming avoids changing state and mutable data.
+
+See Also: Function* - 
+
+
+### Functional Programming
+A type of declarative programming. Programming computations that are evaluated as mathematical functions with no state and no mutable data types. Functions produce results that depend only on the inputs. These kinds of functions are called pure functions.
+
+
+### Functional Testing
+A form of integration testing where the entire system is tested end to end. Tests are done by feeding data to the system and examining the output. Functional testing usually describes what the system does.
+See: Testing.Help
+
+
+### Future
+An object that is a proxy for a future result that has yet to be computed.
+
+
+### General Responsibility Assignment Software Principles (GRASP)
+A group of tried and tested patterns for assigning responsibility to classes and objects. 
+Principles and patterns: Controller, Creator, Indirection, Information Expert, High Cohesion, Low Coupling, Polymorphism, protected variations, pure fabrication.
+Also Called: General Responsibility Assignment Software Patterns
+
+
+### Git Workflow - Gitflow
+
+Branches:
+
+	Feature
+	Development
+	Master
+	Release
+	Hotfix
+
+Atlassian Writeup:
+<l>https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow<>
+@
+@ Git Flow
+
+
+### Git Workflow - Trunk
+All development is done on one branch, typically called trunk.
+
+Features can be developed on separate branches but must be committed ofter to the trunk (multiple times a day).
+Features should be very small, will be deployed when the trunk is released but are controlled using feature flags.
+
+Branches:
+
+	Truck
+	Feature
+@
+@ Git Flow
+
+
+### God Class
+A class that does everything. A very bad idea.
+
+
+### Good Programming Qualities
+Has strong cohesion, proper coupling, no redundancy, readability, encapsulation (data, type, implementation).
+Design to behaviour.
+Favour aggregation over inheritance.
+
+
+### Gorilla
+Here is a gorilla  🦍
+
+
+### Greenfield
+A greenfield project or application is one that has no constraints imposed by prior work.
+See Also: Brownfield
+
+
+### Hash
+A Function that turns data of any size into a fixed-size value.
+
+
+### Heuristic
+Solves a problem using knowledge gained from experience.
+Experience gained from experimenting, especially trial and error methods.
+
+
+### High Endian
+See Big Endian
+
+
+### Higher Order Function
+See: Function - Higher Order
+
+
+### Human-Optimized Config Object Notation (HOCON)
+A more human editable configuration that is as superset of JSON.
+Used by Play / Lightbend, others.
+
+
+### Hyperlink Application Language (HAL)
+Embedded hyperlinks to resources in API results (usually in JSON or XML). This makes APIs self documenting, explorable and discoverable. Embeds '_links' element in data.
+
+
+### Imperative Programming
+Programming that does computations based on state changes (object action). It defines a sequence of commands to perform an action. It is the opposite of declarative programming.
+
+
+### Idempotent
+An element of a set that remains unchanged when applied multiple times.
+
+Example:
+http PUT request on an object will not create multiple new elements. Just the one.
+
+
+### Integration Testing
+Tests one or more components together. It verifies that components work together correctly.
+See: Testing.Help
+
+
+### Invariant
+Two classes are not variants of each other. Neither class is a subclass / subtype or superclass / supertype of each other.
+Ex: List <String>, List <Map>.	// Both are lists but they are invariant to each other.
+
+
+### Inversion of Control
+Slightly misleading name for a design pattern that separates the responsibility of creating an object from it's use in the target class. For instances a text editor will need to use a spell checker. Originally, the text editor would be responsible for instantiating the spell checker. In inversion of control, the text editor would be given the spell checker through some mechanism so it doesn't have to know the specifics.
+
+
+### Keep It DRY, Keep It Shy And Tell The Other Guy
+OO principle caught in a spiffy saying.
+DRY - Don't Repeat Yourself.
+SHY - Don't reveal information about itself unless really necessary. Also stated as "Mind Your Own Business"!
+Tell The Other Guy - Make the other class responsible for providing a service, don’t expect a data return!
+See Also: OO.Help
+
+See: OO.Help
+
+
+### Lambda
+An anonymous function.
+
+
+
+### Lambda - Details
+
+Has 3 components
+
+	a variable
+	an abstraction (the function)
+	the application (the calculation of the function)
+
+Not Supported
+
+	Recursion
+
+Variable Types
+
+	Bound Variable (Parameter)
+	Free Variable (Defined elsewhere (closure))
+
+
+f1 = lambda X · XY
+
+
+	'lambda X · XY'		- abtraction
+	'X' in 'lambda X · XY'	- variable
+	'XY'					- the application
+
+	'X'					- bound variable
+	'Y'					- Free Variable
+
+
+Excel is the world's most popular functional language
+- Simon Peyton-Jones (Mr Haskle)
+
+
+
+### Language - Domain Specific Language (DSL)
+A language that specializes to a particular domain.
+Note: The line isn't always clear between a DSL and a GPL (e.g. Postscript, a gpl that is used primarily as a dsl).
+e.g. Html, Emacs Lisp.
+
+
+### Language - General Purpose Language (GPL)
+A computer language that is broadly applicable across many domains and lacks specialized features for a particular domain.
+
+
+### Lines of Code
+
+Car - High End - 100,000,000
+
+Apollo 11 - 145,000
+Curiosity - 2,500,000
+F22 Raptor Fighter - 1,750,000
+F-35 Fighter - 24,000,000
+Large Hadron Collider - 50,000,000
+Space Shuttle - 400,000
+
+Android - 12,000,000
+Boeing 787 - 14,000,000
+Intuit Quickbooks - 10,000,000
+MS Visual Studio (2012) - 50,000,000
+MySql - 12,500,000
+
+OSX (10.4 Tiger) - 86,000,000
+
+Youtube (Search) - 1,000,000
+
+Windows (2000) - 28,500,000
+Windows (XP) - 39,500,000
+Windows (Vista) - 50,000,000
+Windows (7) - 39,500,000
+
+
+### Liveness
+The outcome that a task eventually completes.
+
+
+### Liveness Failure
+A failure of a task to finish. Ex: a task that gets caught in an infinite loop.
+
+
+### Liskov Substitution
+Concerns variance, covariance and invariance. Basically objects should be replaceable with their subclasses without altering correctness. 
+
+Example: A square seems like a good subclass of rectangle. However setting width and height properties makes no sense for a square as changing one will change the other. Therefore square and rectangle are invariants and fails Liskov Substitution.
+
+Also called: Subtype Polymorphism
+
+
+### Listen, Understand, Decision, Action (LUDA)
+The act of a system listening to some data stream / input source (say Twitter), understanding the input, making a decision and then carrying out an action based on that decision.
+
+
+### Log Structured File System
+Uses a circular buffer (the log) to log changes sequentially.
+
+This is very useful for prolonging the life of SSDs where wear is distributed across the device instead of rewriting to the same spot.
+The overhead is significant in comparison to a traditonal magnetic drive.
+
+Wiki:
+<l>https://en.wikipedia.org/wiki/Log-structured_file_system<>
+
+
+### Machine Learning
+It is all about pattern matching.
+
+
+### MapReduce
+A framework and programming model used to process large unstructured data sets in a distributed manner. It uses a large number of nodes to divide the work up.
+
+MapReduce has two parts, the Map part and the Reduce Part.
+Map - Filter and sort.
+Reduce - Summarize.
+
+These operations are distributed across nodes and run in parallel.
+
+
+#### MapReduce - Cluster vs Grid
+
+Cluster:
+A large number of similar computers (nodes) on the same local network where large datasets are stored.
+
+Grid:
+A large number of computers (nodes) distributed in different network locations or using different hardware
+but containing one or more large datasets.
+
+
+#### MapReduce - Processing - Map
+Performs filtering and sorting.
+Requests are distributed to multiple queues.
+eg. match by list of student names, each name is sent to a different queue).
+
+
+#### MapReduce - Processing - Reduce
+Performs summary operations on data returned from Map operation.
+eg. counting number of matching student names in each queue, giving the student name frequency.
+
+
+#### MapReduce - Steps
+1. Prepare the Map() input.	Designate Map processors.
+
+		Assign Input Key (Key1) for each processor.
+		Provide all necessary input data associated with the key.
+
+2. Run Map() code.	User provides Map() code.
+
+		Map() executed exactly once for each key value (Key1).
+		Generated output is organized by key values (Key2).
+
+3. Shuffle the Map() output	Designate Reduce processors.
+
+		Assign key value (Key2) for each processor.
+		Provide associated Map() generated data.
+
+4. Run Reduce() code.	User provides Reduce() code.
+
+		Reduce() is executed exactly once for each key value (Key2)
+
+5. Produce Output	Collect Reduce() output.
+
+		Sort by key (Key2).
+		Send results.
+
+
+### Marshal
+The process of transforming the memory representation of an object to a data format suitable for storage or transmission.
+Similar to serializing.
+
+
+
+### Master / Slave
+
+Prefer Source / Replica
+
+
+
+### Message Queue Telemetry Transport (MQTT)
+An old but rock solid reliable light weight messaging protocol.
+
+Provides publish-subscribe services. It is fault tolerant and works great for intermittent service. The protocol provides a very small footprint to the message, great for devices with limited bandwidth.
+
+
+### Metadata
+Data that describes and gives information about other data.
+
+
+### Mixin
+Mixins are used to add extra features to a class.
+
+Mixins can only work in multiple inheritance languages. The mixin class is not designed to be a standalone base class. Think more "attach these features" than "inherits from this parent class".
+
+
+### Modulo
+Calculates the remainder after division (usually denoted by %).
+
+5 Modulus 3:
+
+<card>5 % 3 = 2<>
+@
+@ modulus
+
+### Monad
+Monads are features of functional programs that handle exception values when processing values through a chain of functions.
+
+Can be thought of effect handling or effectful functions. Monads handle the passing of an effect value (eg null) through the function chain. Monad syntax hides the complexity keeping the functions more manageable.
+
+
+### Mutex
+Mutual Exclusion. Prevents two or more processes from using the same resource at the same time. It is implemented using a mutually exclusive lock which protects access to a critical section of code. Processes access the lock before attempting to use the resource. Processes accessing a locked area are forced to wait until the lock is released. This prevents race conditions. Many forms of mutexes have side effects (eg deadlocks).
+
+Ex: Process A accesses the lock. It then uses the associated resource. Any other process wanting the resource attempts to access the lock. The lock forces them to wait until process A is complete. Once process A is done, it releases its hold on the lock. The lock then goes to the next process waiting for access.
+
+
+### Name Service
+See: Directory Service
+
+
+### Namespace
+A mechanism to remove ambiguity between different objects of same names. Namespaces usually consist of the namespace name (usually applied as a prefix) and the local name.
+
+
+### Network Partition
+A failure in the network that results in a partitioned or split network.
+
+
+### Newline / End of Line
+@
+@ EOL, New Line, NL
+
+
+
+#### EOL - Line Feed
+
+<cb>\\n<>
+
+<cb>Hex: 0A<>
+
+<cb>Dec: 10<>
+
+
+#### EOL - Carriage Return
+
+<cb>\\r<>
+
+<cb>Hex: 0D<>
+
+<cb>Dec: 13<>
+
+
+#### Newline - HTML
+
+<cb>\<br/><>
+
+
+#### Newline - MacOS, Unix, Linux
+
+<cb>\\n<>
+
+Line Feed
+
+
+#### Newline - Windows
+
+<cb>\\n\\r<>
+
+<cb>Hex: 0A, OD<>
+
+<cb>Dec: 10, 13<>
+
+
+Line Feed + Carriage Return
+
+
+### NOSql
+From short hashtag for meeting #nosql. Has no official meaning. Unofficially called Not Only Sql.
+
+
+### NoSql Database Types
+BigTable, Document Database, Key Value Stores, Graph Database
+
+
+### Nonce
+Number Used Once. (? ->) A token used to grant access to a server after authentication.
+
+@ Nounce
+
+
+### Null Object
+An object that takes the place of a null value and doesn't perform any actions.
+
+It prevents extra code from handling null conditions and also prevents null exceptions.
+
+Invented by Tony Hoare in 1964. He has called this his 'billion dollar mistake'.
+
+
+### OAuth
+A standard for allowing applications to authenticate users using a 3rd party application.
+See: OAuth.Help (Standard - Security - OAuth)
+
+Object Oriented Programming
+Data and the methods that manipulate them.
+Abstraction, Inheritance, Encapsulation, Polymorphism
+
+
+### One Rule One Place
+This means a rule is defined in one and only one place and that all code that requires that rule references only the one place.
+
+
+### Online Analytical Processing (OLAP)
+Analytical operations and business intelligence (BI). Think "Total money spent by all users", "Best selling product"
+eg: Data warehouses
+
+
+### Online Transaction Processing (OLTP)
+Transactional data and transactional operations. Think Insert, Update, Delete.
+eg: Sql Databases
+
+
+### Open Telecom Platform
+An open source collection of useful middleware, libraries and tools written in Erlang programming language. It is part of the open source Erlang distribution. Initially created by Ericsson.
+
+
+### Optimistic Replication
+A replication strategy where replicas of distributed data are allowed to diverge. Data that is updated in one partition may return an old value in another without error. This outdated data will eventually get updated.
+
+
+### Pair Programming
+Programming in pairs.
+Roles: Navigator, Driver.
+
+
+
+### Parameter vs Argument
+
+Parameters are the formal parameter.
+They are defined in the function or method signature.
+
+Arguments are the actual parameter.
+They are the value passed into the function or method.
+
+Parameters:
+
+<cb>function <v>test<> (<v>int_parameter<>, <v>string_parameter<>) {<v>...<>}<>
+
+Arguments:
+
+<cb><v>test<> (<v>1<>, "<v>a string argument.<>");<>
+
+### Pickling
+Converting an object hierarchy into a byte stream. Unpickling is the inverse operation converting a byte stream back into an object hierarchy.
+
+
+### Pipe
+A way to send data one way from one program to another on the same computer. Information is sent as a byte stream from the sender to the receiver.
+Types: Unnamed, Named
+Unnamed - Are short lived and close immediately when the calling program ends. (See bash | operator)
+Named - Also called a FIFO. Can last indefinitely. Usually created as a file that processes can write to or read from. (See: bash mkfifo command)
+
+
+### Poison Pill
+A value placed in a queue to let a downstream listener know the queue is done.
+
+
+### Polyglot
+An environment that runs systems of different languages.
+
+
+### Polyquine
+A program that prints its code and can do it while running in more than one language.
+
+
+### Predicate
+In programming terms, a function that returns true or false.
+vs: Logical Predicate (a property of something)
+
+
+### Programming
+Is Data Structures + Algorithms.
+
+
+### Programming Paradigms
+
+
+#### Programming Paradigms - Summary
+
+Automata-based
+Functional
+Imperative
+Logical
+Object Oriented
+Procedural
+Reactive
+
+
+#### Programming Paradigms - Automata-based
+A program, or part, is treated as a model of a finite state machine or any other formal automaton.
+
+
+#### Programming Paradigms - Declarative
+Defines program logic, but not detailed control flow.
+
+
+#### Programming Paradigms - Event-driven
+Program control flow is determined by events, such as sensor inputs or user actions (mouse clicks, key presses) or messages from other programs or threads.
+eg: Javascript Web Applications, Graphical User Interfaces
+
+
+#### Programming Paradigms - Functional
+Treats programs as evaluating mathematical functions and avoids state and mutable data.
+eg: Clojure, Mathematica (Wolfram Language), Haskell, Erlang
+
+
+#### Programming Paradigms - Imperative
+Defines computation as statements that change a program state.
+
+
+#### Programming Paradigms - Logical
+Programming is based on formal logic. Any program written in a logic programming language is a set of sentences in logical form, expressing facts and rules about some problem domain.
+eg: Prolog, Anser Ste Programming (ASP), Datalog
+
+
+#### Programming Paradigms - Object-oriented (OOP)
+Organizes programs as objects: data structures consisting of data fields and methods together with their interactions.
+eg: Java, C++, C#, Python, Swift, Scala, Common Lisp, Smalltalk
+
+
+#### Programming Paradigms - Procedural, Structured
+A type of imperative programming. Specifies the steps a program must take to reach a desired state.
+eg: C, Basic, Fortran, Cobol, Pascal
+
+
+#### Programming Paradigms - Reactive
+An asynchronous programming paradigm based around data streams and propagating change.
+eg: Akka Streams
+
+
+### Project Estimation - Constructive Cost Model (COCOMO)
+The Constructive Cost Model (COCOMO) is a procedural software cost estimation model. The model uses a basic regression formula with parameters that are derived from historical project data and current as well as future project characteristics.
+
+
+### Provisioning
+Making something/some resource available.
+
+
+### Pure Function
+See: Function - Pure Function
+
+
+### Quine
+A program that prints its own code.
+
+Interesting quines: quine-relay. Rewrites itself through 128 different languages and back into the starting language.
+
+See Also: Polyquine
+
+
+### Race Conditions
+Where tasks on different threads interfere with a shared resource creating an incorrect state/value.
+(Concurrency / Asynchronous)
+
+
+
+### Radix / Base
+The number of digits used to represent a number.
+
+Radix 2		Binary (0, 1)
+Radix 8		Octal (0 to 7)
+Radix 10 	Decimal (0 to 10)
+Radix 16	Hex Numbers (0 - F)
+
+
+
+### Raft Algorithm
+
+A generic way to distribute a state machine across a cluster so that each node agrees on the series of state transactions.
+It is Reliable, Replicated, Redundant, And Fault-Tolerant.
+
+vs Paxos Alorithm.
+
+
+Wiki:
+<l>https://en.wikipedia.org/wiki/Raft_(algorithm)<>
+@
+@ Distributed
+
+
+### Reactive Manifesto
+A manifesto about computer systems. They should be responsive, resilient, elastic and message driven.
+
+
+Official Site: <l>https://www.reactivemanifesto.org/<>
+
+
+### Reactive Programming
+Reactive programming is an asynchronous programming paradigm oriented around data streams and the propagation of change.
+
+
+### Reactive Stream
+Is a standard for asynchronous stream processing with non-blocking back pressure.
+
+Problem:
+In a publisher subscriber model with a fast publisher and a slow subscriber, the subscriber usually has a buffer and that overflows.
+Bad Solution 1: Bounded Buffer - The buffer has a limited size. Anything over that is dropped and must be resent by the publisher. (eg: TCP, OS Kernels).
+Bad Solution 2: Unbounded Buffer - The buffer takes everything. This ends in memory overflow problems.
+
+Solution:
+Govern the exchange of stream data across an asynchronous boundary. The receiver side limits the size of the buffer and pushes back to the sender when it is full. All communication is done asynchronously.
+eg: Akka Streams
+
+
+### Recursion
+When a function is defined in terms of itself. A function that calls itself as part of the solution.
+
+
+### Recursion - Program Types
+All programs are one of these 3 types:
+
+	Recursively Enumerable functions
+	Recursive
+	Primitive Recursive
+
+
+#### Recursion Program Type - Recursively Enumerable
+May give an answer back or may go on for ever and you can't easily determine that it is indeterminate.
+
+
+#### Recursion Program Type - Recursive
+A problem that must be solved recursively.
+
+
+#### Recursion Program Type - Primitive Recursive
+Sequence of steps.
+For loops, nested for loops.
+Includes all programs that are not recursive.
+
+
+### Reification / Reified
+Enforcing of types at runtime.
+Ex: Java arrays
+See also: Erasure (opposite)
+
+
+### Reify
+Turn something abstract into something real or more concrete.
+
+
+### Read Evaluate Print Loop (REPL)
+An interactive computer programming environment.
+Origin: Lisp
+eg: Python shell.
+Also called: Interactive Top-level
+
+
+### Responsive Design
+A web design approach that aims to provide an easy to read and navigation experience.
+Should require a minimum of resizing, panning and scrolling across a wide range of devices (monitors to mobile phones).
+
+
+### Responsive Design - Mobile First
+Design philosophy that states start with mobile first layouts and work outwards to full screen desktop.
+
+
+### REST (Representational State Transfer)
+Typically done using HTTP but not necessarily. It identifies a resource, and applies a command. In HTTP terms, the resource is a url and the command is a HTTP verb.
+See: Rest - Summary.rtf
+
+
+### Reverse Domain Name Notation (reverse-DNS)
+A naming convention used for components, packages and other programming and system resources. The name is in reverse for sorting purposes.
+Ex: com.company.example
+
+
+### Safety
+Nothing bad happens (task completes successfully). REST - Operation has no side effects (GET will not update a record).
+
+
+### Scaffolding
+A code generating technique to get an application up and running quickly from some sort of templates. It involves using a tool to generate the code (Spring Roo, CakePHP, Grails, Play Scaffold…).
+
+
+### Scaling
+Systems can scale horizontally or vertically.
+
+Horizontal Scaling	Adding more machines.
+Vertical Scaling	Adding more power (cpu, ram, disk)
+
+
+### Scaling Out
+Increasing bandwidth and performance by adding and distributing on multiple servers.
+vs Scaling Up
+
+
+### Security Assertion Markup Language (SAML)
+An XML based open standard format for exchanging authentication and authorization between services. 
+eg: Web browser single sign-on.
+See: SAML.Help (Standard - Security - SAML)
+
+
+### Self-Describing Structure
+See: Semi-structured Data
+
+
+### Semaphore
+A counter that show how many of a pool of resources are available and blocks when the resources are fully utilized (number of available resources = 0). Semaphores are written in such a way that gaining access to the resource and keeping track of resource use is protected from race conditions. Semaphores can track how many resources are used but not what resources.
+
+Threads use 2 methods to access a semaphore: wait, signal. Resource can only be accessed when resource is not 0.
+
+Some types: Counting Semaphore (resource pool), Binary Semaphore (only one resource).
+
+
+### Semi-Structured Data
+Doesn't conform to standards of structured data (think relational database table) but still has structure.
+It should have tags or other markers separating elements and an enforced hierarchy and enforced fields.
+Entities in the same data class may have different attributes. Attribute order is not important.
+eg: XML, Json
+Also Known As: Self-Describing Structure
+
+
+### Sentinel Node
+
+A node that denotes the end or terminator of a path.
+
+Used in trees and linked lists.
+Holds no value.
+
+
+### Sentinel Value
+Used to check for a missing value where none/null is a valid value.
+
+Python:
+
+<cb>MISSING = 'SOME NON-VALUE'		<#># Sentinev Value<>
+
+def <v>some_function<> (<v>value<> = MISSING):
+
+	if <v>value<> == MISSING:
+		<v>value<> = DEFAULT_VALUE
+
+	<v>...<><>
+
+
+### Single Page Application
+Web design pattern where a site will manage content through a single page using javascript instead of through multiple page requests send to the server. Single page applications do not have to be only one page.
+
+
+### SOAP (Simple Object Access Protocol)
+A protocol for defining services on a web server. Available services are defined in a WSDL file. Messages are transmitted in a SOAP envelop which contains a header section, a body section and optionally an error section.
+
+
+### Software Release Life Cycle
+Pre-alpha
+Alpha
+Beta
+Release Candidate
+Release to Manufacturing (RTM)
+General Availability (GA)
+Production / Live Release / Gold
+
+
+### Solid Principle
+A collection of OO principles.
+
+S - Single Responsibility
+O - Open / Closed
+L - Liskov Substitution
+I - Interface Segregation
+D - Dependency Injection
+
+
+Coined by Robert Martin to summarize good OO architecture.
+
+
+#### Solid Principle - Single Responsibility (S)
+An object should have only one responsibility.
+
+
+#### Solid Principle - Open / Closed (O)
+Open for extension but closed for modification.
+
+
+#### Solid Principle - Liskov Substitution (L)
+Object Subtype should replace the super type without altering correctness.
+
+
+#### Solid Principle - Interface Segregation (I)
+Multiple specific interfaces are better than one general purpose interface.
+
+
+#### Solid Principle - Dependency Injection (D)
+Depend on abstractions not concretions.
+
+
+### Split Brain
+Indicates data or availability inconsistencies resulting from the maintenance of two separate data sets with overlapping scope.
+Data stored on two separate instances can disagree when instances don't update together.
+
+
+### Spring Framework
+Principles: Simplify coding and eliminate boilerplate by providing dependency injection, AOP and portable service abstractions.
+
+
+### Stream
+Data that is sent in packets. It may be unlimited.
+
+
+### Streaming
+A way of processing streams of data in real time (unlimited packets). Streams can not be handled in conventional batches.
+Functions that generate new streams from incoming streams are called filters. Series of filters are called pipelines and are analogous to functional composition.
+
+Streaming functions are broken into two types - Intermediate and terminal. There can be 0 to n intermediate functions but there always 1 terminal function. They chain together to create a pipeline of operations. The functions don't do anything until an item arrives to do work on.
+
+
+### String Intering
+The process of storing immutable strings in a space saving way.
+
+
+
+### Stringly Typed
+A function or even program that passes values through strings.
+
+These should be converted to their proper types and passed in data structures.
+
+
+
+### Super Exponentially
+N^N^N^N...
+
+
+
+### Technical Debt
+This is the additional time and money that must be put into the code base after adding a code change to make the code complete.
+
+Often new or updated code will affect other areas in the code. These other areas must be updated for the solution to be complete but often don't get done. This happens because of time pressure, lack of understanding, lack of test suites, parallel development, etc.
+
+
+### Test Driven Development
+ A practice of writing the test 1st and then coding the functions. The test must fail if no code is written to verify that the test actually works. The code is then written to the test.
+See also: Testing.Help
+
+
+### Time Complexity
+Describes the runtime complexity of an algorithm in mathematical terms.
+
+
+Wikipedia: <l>https://en.wikipedia.org/wiki/Time_complexity<>
+
+See Also: Big Oh Notation
+
+
+### Traumatropism
+This is the regrowth of a plant or tree, often in a bizarre shape or direction, as a result of earlier damage or trauma, like a lightning strike.
+
+Applies equally to code that has suffered damage or trauma!
+
+
+### Turing Complete
+Must be able to do everything a Turing Machine can do.
+- (1) Must have conditional branching (If Then Else).
+- - Implies a goto.
+- - Assembler uses goto under the hood (unavoidable).
+- (2) Must have arbitrary amount of memory.
+- - As much as the problem needs
+
+
+### Turing Machine
+Infinite piece of tape with a read/write head that goes over the marks on the tape. The ability to read and write patterns of 0s and 1s is powerful enough to compute anything that is computable.
+
+
+### Unit Testing
+Tests a unit of a program, a method or function for instance. Best practices are to test only public functions and to use the interface where possible.
+See also: Testing.Help
+
+
+### Unix Time
+A point in time as tracked on a Unix system.
+
+= the number of seconds since January 1st, 1970 at 00:00:00 UTC.
+
+Also called: Epoch Time
+
+@ Epoch
+
+
+### Unmarshal
+The process of converting a stored or transmitted object data back into the memory representation of the object.
+
+
+### Unstructured Data
+It has no pre-defined data model or is not organized in a pre-defined manner.
+It is usually text heavy but may contain data such as dates, numbers, facts.
+
+
+### Value Object (VO)
+An object that is define by its attributes. It defined by properties but has no identity. Comparisons are based on their value only. Eg. SocialSecurityNumber, UUID, Money, Address
+Value objects should be immutable.
+
+
+### Version Numbers
+
+
+#### Version Numbers - Summary
+<c><v>Major<>.<v>Minor<>.<v>Release<><>
+<c><v>Major<>.<v>Minor<>.<v>Release<>.<v>Build<><>
+
+1.0			Dot-O Release
+1.1			Dot-X Release
+1.1.1		Dot-Y Release
+
+
+#### Versions - Dot-O Release
+A major release. 
+
+Can drop, deprecated APIs. Can break binary compatibility.
+
+e.g.	1.0
+
+@ Major Release
+
+
+#### Versions - Dot-X Release
+A minor release. Add features and APIs. Should not break binary compatibility.
+
+e.g.	1.1
+
+@ Minor Release
+
+
+#### Versions - Dot-Y Release
+A service pack release. Correct specific problems. Do not introduce new features or APIs.
+
+e.g.	1.1.1
+
+@ Dot-X-Dot-Y, Service Pack
+
+

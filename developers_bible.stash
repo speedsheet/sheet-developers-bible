@@ -1206,6 +1206,71 @@ Source:
 
 
 
+# Reference - Image Types
+@
+@ formats
+
+
+### GIF
+Graphics Interchange Format
+
+A Bitmap Image Format
+
+<*>8-Bit Indexed Color
+Animations<>
+
+
+
+### HEIC
+High-Efficiency Image Container
+
+A Lossy Image Format
+Developed by the Moving Picture Experts Group (MPEG) in 2015
+
+<*>Image Compression
+Store Multiple Images
+Animation
+Metadata<>
+
+
+
+### JPEG
+Joint Photograhpic Experts Group
+
+A Lossy Compression Image Format
+Created in 1992
+
+<*>Lossy Compression<>
+
+
+
+### PNG
+Portable Network Graphics
+
+Developed In 1996
+
+<*>Lossless Compression
+Supports 24-bit Color
+Alpha Transparancy<>
+
+
+
+### WEBP
+Web Picture Format
+
+A Lossy/lossless Image Format
+Developed by Google in 2010
+
+Supports:
+
+<*>Lossy Compression
+Lossless Compression
+Alpha Transparency
+Animation
+Metadata<>
+
+
+
 # Acronyms
 
 
@@ -1331,7 +1396,6 @@ Directed Acyclic Graph
 Database Abstraction Layer
 
 
-
 #### DCT
 Discrete Cosine Transformation
 
@@ -1380,6 +1444,12 @@ General Purpose Language
 
 #### GRASP
 General Responsibility Assignment Software Principles
+
+
+#### GUID
+Global Uniqui Identifier
+
+Microsoft's name for UUIDs (typically variant 2).
 
 
 #### HAL
@@ -1568,6 +1638,10 @@ Time To Live (Caching)
 Use The Source Luke (where the source is the best documentation)
 
 
+#### UUID
+Universally Unique Identifier
+
+
 #### VO
 Value Object
 
@@ -1646,9 +1720,14 @@ Procedure always finishes.
 Can be proven to work for all cases.
 
 
+### Arity
+The number of arguments or operands taken by a function.
+
+<c><v>f<>(<v>a<>, <v>b<>)<> is a binary function and has arity 2.
+
+
 ### Auto Boxing
 The automatic conversion of primitive types into their representative classes and back.
-
 
 
 ### Base36
@@ -3281,6 +3360,19 @@ Also called: Epoch Time
 The process of converting a stored or transmitted object data back into the memory representation of the object.
 
 
+### Universally Unique Identifier (UUID)
+A 128-bit identifier.
+For most practical purposes, the id is unique.
+
+String Format:
+<v>xxxxxxxx<>-<v>xxxx<>-<v>Mxxx<>-<v>Nxxx<>-<v>xxxxxxxxxxxx<>
+
+M: UUID Version
+N: UUID Variant
+@
+@ guid
+
+
 ### Unstructured Data
 It has no pre-defined data model or is not organized in a pre-defined manner.
 It is usually text heavy but may contain data such as dates, numbers, facts.
@@ -3289,6 +3381,10 @@ It is usually text heavy but may contain data such as dates, numbers, facts.
 ### Value Object (VO)
 An object that is define by its attributes. It defined by properties but has no identity. Comparisons are based on their value only. Eg. SocialSecurityNumber, UUID, Money, Address
 Value objects should be immutable.
+
+
+### Variadic Function
+A function which takes a variable number of arguments (indefinite arity).
 
 
 ### Version Numbers

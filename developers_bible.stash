@@ -230,41 +230,36 @@ Wiki:
 # Code Smells
 
 
+## Code Smells - Categories - Summary
 
-## Code Smells - Categories
-
-
-
-### Code Smells - Categories - Summary
-
-Bloaters
+<card>Bloaters
 Change Preventers
 Couplers
 Dispensables
-Tool Abusers
+Tool Abusers<>
 
 
 
-### Code Smells - Categories - Details
+## Code Smells - Categories - Details
 
 
 
-#### Code Smells - Category - Bloaters
+### Code Smells - Category - Bloaters
 
 Code, methods or classes that that have grown to a size that makes them hard to work with or hard to understand.
 
 
 Smells:
 
-	Long Method
-	Large Class
-	Data Clumps
-	Long Parameter List
-	Primitive Obsession
+<card>Long Method
+Large Class
+Data Clumps
+Long Parameter List
+Primitive Obsession<>
 
 
 
-#### Code Smells - Category - Change Preventers
+### Code Smells - Category - Change Preventers
 
 Changes  one area force code changes in other areas.
 
@@ -273,28 +268,27 @@ This makes development much more difficult, time consuming, and expensive.
 
 Smells:
 
-	Divergent Change
-	Shotgun Surgery
-	Parallel Inheritance Hierarchies
-	Responsibility Overload				<#>(Mine)<>
+<card>Divergent Change
+Shotgun Surgery
+Parallel Inheritance Hierarchies<>
 
 
 
-#### Code Smells - Category - Couplers
+### Code Smells - Category - Couplers
 
 Code that has excessive coupling between classes.
 
 
 Smells:
 
-	Feature Envy
-	Inappropriate Intimacy
-	Message Chains
-	Middle Man
+<card>Feature Envy
+Inappropriate Intimacy
+Message Chains
+Middle Man<>
 
 
 
-#### Code Smells - Category - Dispensable
+### Code Smells - Category - Dispensable
 
 Code that is pointless and unneeded.
 
@@ -303,50 +297,30 @@ Removing these will make the code cleaner, more efficient and easier to understa
 
 Smells:
 
-	Lazy Class
-	Speculative Generality
-	Data Class
-	Duplicated Code
+<card>Lazy Class
+Speculative Generality
+Data Class
+Duplicated Code
 
-	Dead Code
-	Comments
+Dead Code
+Comments<>
 
 
-
-#### Code Smells - Category - Tool Abusers
+### Code Smells - Category - Tool Abusers
 
 These smells implement programming principles incorrectly or incompletely.
 
 
 Smells:
 
-	Switch Statements
-	Refused Bequest
-	Alternative Classes w/ Different Interfaces
-	Temporary Field
-
-	If Bomb						<#>(Mine)<>
-	Misdirection					<#>(Mine)<>
+<card>Switch Statements
+Refused Bequest
+Alternative Classes w/ Different Interfaces
+Temporary Field<>
 
 
 
-#### Code Smells - Category - Me
-
-Personal smells I see often.
-
-
-Smells:
-
-	Misdirection
-	Responsibility Overload			<#>(Change Preventer)<>
-	Coding the end in the beginning	<#>(Inappropriate intimacy)<>
-
-	How, Not Why					<#>(Change Preventer)<>
-	If Bomb							<#>(Change Preventer, Tool Abuser)<>
-
-
-
-#### Code Smells - Category - Others
+### Code Smells - Category - Others
 
 Entanglement / Ripple Effect	(Change Preventer) (Too Much Coupling)
 
@@ -501,57 +475,6 @@ Type: Tool Abuser
 
 
 
-## Code Smells - Mine - Details
-
-
-
-### Code Smell - How, Not Why (Mine)
-The code is named and designed based on how it is done, not why it is done.
-
-
-Type: Change Preventer
-
-<#>(Mine)<>
-
-
-
-### Code Smell - If Bomb (Mine)
-Defined by a long and complicate series of nested if statements.
-
-If statements should be limited.
-2 if statements is too many in a method.
-Even 1 is questionable.
-
-
-Type: Bloater, Tool Abuser
-@
-@ Bloater, Tool Abuser
-
-
-
-### Code Smell - Misdirection (Mine)
-When a function or class indicates it does one thing when it does something else entirely.
-
-
-Type: Tool Abuser
-
-
-<#>Mine<>
-@
-@ Tool Abuser
-
-
-
-### Code Smell - Responsibility Overload (Mine)
-Where a class or function does too many things. Violates single responsibility.
-
-
-Type: Change Peventer
-@
-@ Change Preventer
-
-
-
 # Documentation
 
 
@@ -587,11 +510,11 @@ Complete Documentation ≠ Great Documentation
 
 ### Documentation Types - Summary
 
-Tutorial
+<card>Tutorial
 Quick Start
 How-To Guide
 Explanation
-Reference
+Reference<>
 
 
 
@@ -2065,6 +1988,25 @@ A persistency pattern that allows information to be saved one way but read a dif
 USE WITH CAUTION: Many apps have gotten into trouble implementing this poorly. CRUD is more reliable for the majority of uses.
 
 
+### Comments
+
+
+### Comments - Documentation Comments
+These are standardized comments that document the functionality of a program. They are typically defined at the head of classes, methods and functions and can be exported to create API documentation.
+
+Also Called: Docstrings (Python)
+@
+@ docstrings
+
+
+### Comments - Comment Scaffolding
+A technique of using comments to lay out the structure of the code before coding starts.
+
+This is great for organizing the code as comments are quick and far cheaper than code to change.
+
+Scaffolding comments should be removed once the coding is complete.
+
+
 ### Compare And Swap (CAS)
 Achieves atomic synchronized data changes in a multithreading environment. Data is compared against the stored value, then updates the stored value only if they are the same. The operation fails if the compared values are different. This is done as an atomic operation and guarantees the new value is calculated on the most up to date information.
 
@@ -2279,10 +2221,6 @@ Used By: Apache Spark (Resilient Distributed Datasets (RDD))
 ### Directory Service
 Also Called: Name Service
 Used for locating resources on a network. The resource name is stored in the directory service along with it's network address.
-
-
-### Documentation Comments
-Comments in code that document the code functionality. They can be exported to create API documentation.
 
 
 ### Domain Driven Design

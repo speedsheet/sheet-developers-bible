@@ -1201,6 +1201,11 @@ Metadata<>
 Two Factor Authentication
 
 
+
+#### ABNF
+Augmented Backus-Naur Form
+
+
 #### ACID
 Atomicity, Consistency, Isolation, Durability
 
@@ -1245,6 +1250,11 @@ Behaviour Driven Development
 
 #### BI
 Business Intelligence
+
+
+
+#### BNF
+Bacus-Naur Form / Bacus Norma Form
 
 
 #### BO
@@ -1351,6 +1361,10 @@ Enterprise Resource Planning
 
 #### ETL
 Extract, Transform, Load
+
+
+#### EBNF
+Extended Backus-Naur Form
 
 
 #### FAAS
@@ -1649,6 +1663,23 @@ The number of arguments or operands taken by a function.
 <c><v>f<>(<v>a<>, <v>b<>)<> is a binary function and has arity 2.
 
 
+### Augmented Backus-Naur Form (ABNF)
+
+A notation system that represents context-free grammars.
+
+It is an extension and a simplification of regular Backus-Naur Form (BNF).
+It uses regular expressions in the syntax.
+
+
+<cb><v>integer<> = *DIGIT<>
+
+
+Wiki:
+<l>https://en.wikipedia.org/wiki/Augmented_Backus%E2%80%93Naur_form<>
+@
+@ syntax notation, grammar
+
+
 ### Auto Boxing
 The automatic conversion of primitive types into their representative classes and back.
 
@@ -1782,6 +1813,21 @@ Wiki:
 ### Behaviour Driven Development (BDD)
 Specifies the tests to be used in Test Driven Development(TDD) as TDD does not state the form the unit tests should be in. BDD states that the tests must be defined in terms of desired behavior (derived from user stories).
 See also: Testing.Help
+
+
+### Backus-Naur Form (BNF)
+
+A syntax notation that defines context-free grammars.
+
+
+<cb>\<<v>integer<>> ::= \<<v>digit<>>|\<<v>integer<>>\<<v>digit<>><>
+
+
+Wiki:
+<l>https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form<>
+@
+@ syntax notation, grammar.
+
 
 
 ### Big O Notation
@@ -2247,6 +2293,14 @@ A screen/web page that allows the user to edit the page in place.
 The entry point to a web service. The base url of a web service. A web service may have different end points for different protocols.
 
 
+### Encapsulation
+Public Interface / Private Implementation
+
+A language feature that lets a class/object define a public interface but hides the implementation details.
+
+Similar to modularity but more narrowly applied to classes/objects only.
+
+
 ### Entity
 Better Definition: An item that has an identity (typically defined by its id), not its properties. It's properties can change over time but it will alway have the same identity.
 An object that represents a business item. From Entity Relationship Diagram. Entities have relationships to other entities. In the software world, entities are generally mapped to database tables (eg: Java JPA class with @Entity annotation).
@@ -2333,6 +2387,23 @@ States that access to a piece of data in a distributed system will eventually re
 In contrast to ACID/RDBMS.
 Uses: Optimistic Replication
 Also Called: BASE (Basically Available, Soft State, Evaluate Consistency)
+
+
+
+### Extended Backus-Naur Form (EBNF)
+
+A notation system that represents context-free grammars.
+
+It is an extension and a simplification of regular Backus-Naur Form (BNF).
+
+
+<cb><v>integer<> = <v>digit<> | <v>integer<> <v>digit<><>
+
+
+Wiki:
+<l>https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form<>
+@
+@ syntax notation, grammar
 
 
 ### Extract, Transform, Load
@@ -2701,6 +2772,18 @@ Data that describes and gives information about other data.
 Mixins are used to add extra features to a class.
 
 Mixins can only work in multiple inheritance languages. The mixin class is not designed to be a standalone base class. Think more "attach these features" than "inherits from this parent class".
+
+
+### Modular Programming Language
+A programming language that uses modules to expose interfaces while hiding the implementation.
+@
+@ paradigm
+
+
+### Modularity
+Public Interface / Private Implementation
+
+A language feature that lets a program define a public interface but hides the implementation details.
 
 
 ### Modulo

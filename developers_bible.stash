@@ -793,6 +793,10 @@ The idea is that making functions very small, allows for rapid change and accele
 Co-founder of Outpace Systems.
 
 
+2015 GOTO Talk:
+<l>https://www.youtube.com/watch?v=l1Efy4RB_kw<>
+
+
 
 ### James Gosling
 
@@ -1541,6 +1545,10 @@ Software as a Service
 
 #### SAML
 Security Assertion Markup Language
+
+
+#### SLOC
+Source Lines of Code
 
 
 #### SOA
@@ -2522,6 +2530,14 @@ See Also: Brownfield
 A Function that turns data of any size into a fixed-size value.
 
 
+### Heap Fragmentation / Memory Fragmentation
+What happens when memory is fragmented into many non-contiguous blocks.
+
+This can be a problem as the unused memory between the blocks can be small and unusable.
+This is rarely a problem as computers can map those small unused areas into one large virtual memory space.
+
+
+
 ### Heuristic
 Solves a problem using knowledge gained from experience.
 Experience gained from experimenting, especially trial and error methods.
@@ -2961,6 +2977,31 @@ A value placed in a queue to let a downstream listener know the queue is done.
 An environment that runs systems of different languages.
 
 
+### Polymorphism
+The ability for some code or interface to work with different types.
+
+Poly - Many
+Morph - Forms
+
+Classes:
+
+	Interface / Implementation
+	Parent Class / Sub Class
+
+Functions:
+
+	Parameter Inspection (Dynamic Typing)
+
+Function Overloading:
+
+	Implementation By Parameter Signature
+
+Generics (Parametric Polymorphism):
+
+	Implementation / Instantiation + Type
+
+
+
 ### Polyquine
 A program that prints its code and can do it while running in more than one language.
 
@@ -3276,6 +3317,8 @@ Open for extension but closed for modification.
 
 #### Solid Principle - Liskov Substitution (L)
 Object Subtype should replace the super type without altering correctness.
+
+This is all about type correctness.
 
 
 #### Solid Principle - Interface Segregation (I)

@@ -2318,10 +2318,17 @@ An object that represents a business item. From Entity Relationship Diagram. Ent
 Two items tied together when they should be separate (in code smell terms).
 
 
-### Epoch Time
+### Epoch
 The time at Unix Time 0.
 
 January 1st, 1970 at 00:00:00 UTC.
+@
+@ unix time
+
+
+### Epoch Time / Unix Time
+The time that has passed in seconds since the Unix epoch (January 1st, 1970).
+
 
 ### Erasure
 The enforcement of types at compile time but removal of those enforcements in the runtime.
@@ -2526,6 +2533,12 @@ A greenfield project or application is one that has no constraints imposed by pr
 See Also: Brownfield
 
 
+### Guard
+A boolean expression that must be true before a section of code can be run.
+
+Also Called: Guard Clause, Guard Statement
+
+
 ### Hash
 A Function that turns data of any size into a fixed-size value.
 
@@ -2535,7 +2548,6 @@ What happens when memory is fragmented into many non-contiguous blocks.
 
 This can be a problem as the unused memory between the blocks can be small and unusable.
 This is rarely a problem as computers can map those small unused areas into one large virtual memory space.
-
 
 
 ### Heuristic
@@ -3408,16 +3420,6 @@ Infinite piece of tape with a read/write head that goes over the marks on the ta
 ### Unit Testing
 Tests a unit of a program, a method or function for instance. Best practices are to test only public functions and to use the interface where possible.
 See also: Testing.Help
-
-
-### Unix Time
-A point in time as tracked on a Unix system.
-
-= the number of seconds since January 1st, 1970 at 00:00:00 UTC.
-
-Also called: Epoch Time
-
-@ Epoch
 
 
 ### Unmarshal

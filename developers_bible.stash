@@ -555,7 +555,7 @@ Analogy:
 
 Examples:
 
-	Cheatsheet
+	Cheat Sheet
 	'Cook' Book
 
 
@@ -1138,6 +1138,19 @@ Source:
 @ formats
 
 
+### AVIF
+AV1 Image File Format
+
+<*>Image Compression (AV1)
+Uses HEIF Container Format
+Can Store Multiple Image Sequences<>
+
+Wiki:
+<l>https://en.wikipedia.org/wiki/AVIF<>
+@
+@ .avif
+
+
 ### GIF
 Graphics Interchange Format
 
@@ -1145,6 +1158,8 @@ A Bitmap Image Format
 
 <*>8-Bit Indexed Color
 Animations<>
+@
+@ .gif
 
 
 
@@ -1154,10 +1169,23 @@ High-Efficiency Image Container
 A Lossy Image Format
 Developed by the Moving Picture Experts Group (MPEG) in 2015
 
-<*>Image Compression
+<*>Image Compression (HEVC)
 Store Multiple Images
 Animation
 Metadata<>
+@
+@ .heic
+
+
+
+### ICO
+Icon Image Format Created By Microsoft
+
+<*>Contains 1 or More Images
+Container for BMP, PNG Images<>
+
+Wiki:
+<l>https://en.wikipedia.org/wiki/ICO_(file_format)<>
 
 
 
@@ -1168,6 +1196,8 @@ A Lossy Compression Image Format
 Created in 1992
 
 <*>Lossy Compression<>
+@
+@ jpg, .jpg, .jpeg
 
 
 
@@ -1179,6 +1209,8 @@ Developed In 1996
 <*>Lossless Compression
 Supports 24-bit Color
 Alpha Transparancy<>
+@
+@ .png
 
 
 
@@ -1195,6 +1227,8 @@ Lossless Compression
 Alpha Transparency
 Animation
 Metadata<>
+@
+@ .webp
 
 
 
@@ -1203,7 +1237,6 @@ Metadata<>
 
 #### 2FA
 Two Factor Authentication
-
 
 
 #### ABNF
@@ -1218,6 +1251,10 @@ Atomicity, Consistency, Isolation, Durability
 Access Control List
 
 
+#### ADT
+Algebraic Data Type
+
+
 #### AES
 Advanced Encryption Standard
 
@@ -1226,14 +1263,12 @@ Advanced Encryption Standard
 Application Lifecycle Management
 
 
-
 #### ANSI
 American National Standards Institute
 
 
 #### AOP
 Aspect-oriented Programming
-
 
 
 #### ASCII
@@ -1254,7 +1289,6 @@ Behaviour Driven Development
 
 #### BI
 Business Intelligence
-
 
 
 #### BNF
@@ -1347,8 +1381,17 @@ Don't Repeat Yourself
 Domain Specific Language
 
 
+#### DTAP
+Development, Test, Acceptance, Production
+
+
 #### DTO
 Data Transfer Object
+
+
+#### ELK
+ElasticSearch, Logstash, Kibana
+(Now Elastic Stack)
 
 
 #### EOF
@@ -1403,12 +1446,20 @@ HAL 9000, the fictional artificial intelligent computer from the movie '2001, A 
 Named by taking IBM and changing each letter to the one before in the alphabet.
 
 
+#### HATEOS
+Hypermedia as the Engine of Application State
+
+
 #### HDFS
 Hadoop Distributed File System
 
 
 #### HOCON
 Human-Optimized Config Object Notation (a superset of JSON)
+
+
+#### i18n
+Short For: Internationalization and Localization
 
 
 #### IAAS
@@ -1427,6 +1478,10 @@ International Organization for Standardization
 JavaScript Object Notation
 
 
+#### L10n
+Short For: Internationalization and Localization
+
+
 #### LLVM
 Low Level Virtual Machine
 
@@ -1435,8 +1490,20 @@ Low Level Virtual Machine
 Least Recently Used (Caches)
 
 
+#### LSP
+Language Server Protocol
+
+Used by editors and IDEs to add language specific features.
+
+Wiki: <l>https://en.wikipedia.org/wiki/Language_Server_Protocol<>
+
+
 #### LUDA
 Listen, Understand, Decision, Action
+
+
+#### MapR
+MapReduce, The data processing framework of Hadoop
 
 
 #### MEAN
@@ -1511,6 +1578,10 @@ Open Telecom Platform
 Platform As A Service
 
 
+#### RAII
+Resource Acquisition is Initialization
+
+
 #### RBAC
 Role-based Access Control
 
@@ -1547,6 +1618,14 @@ Software as a Service
 Security Assertion Markup Language
 
 
+#### SCP
+Secure Copy Protocol
+
+
+#### SH
+Shell
+
+
 #### SLOC
 Source Lines of Code
 
@@ -1567,12 +1646,24 @@ Single Responsibility, Open / Closed, Liskov Substitution, Interface Segregation
 Single Responsibility Principle
 
 
+#### SSH
+Secure Shell
+
+
+### SSL
+Secure Socket Layer
+
+
 #### TDD
 Testing Driven Development
 
 
 #### TOTP
 Time-based One-time Password (Algorithm)
+
+
+#### TSL
+Transport Layer Security
 
 
 #### TTL
@@ -1599,24 +1690,37 @@ Web Service Definition Language
 Extensible Markup Language
 
 
-#### ELK
-ElasticSearch, Logstash, Kibana
-(Now Elastic Stack)
-
-
-#### HDFS
-Hadoop Distributed File System
-
-
-#### MapR
-MapReduce, The data processing framework of Hadoop
-
-
 #### YARN
 Yet Another Resource Negotiator
 
 
+
 # Terms
+
+
+### 3-2-1 Backup Rule
+A backup strategy.
+
+3 Backups
+2 Media Types
+1 Offsite Copy
+
+3 Backups:
+
+<in-2>Store at least 3 different copies.<>
+
+2 Media Types
+
+<in-2>Store on 2 different media types (e.g. disk + online, diskk + nas, etc.)<>
+
+1 Offsite Copy:
+
+<in-2>Store copies in 2 different backu plocations.<>
+
+
+
+### Abstract Syntax Tree (AST)
+A tree representing the abstract syntactic structure of things such as source code written in a language. It is widely used by compilers.
 
 
 ### Abstraction
@@ -1644,19 +1748,27 @@ Durability	- Once a transaction is committed, it will remain so. It will survive
 Aspect programming feature (AOP) where a function modifies another function while the other is running. The advice function is applied at a given join point.
 
 
-### Algebraic Data Type
+### Algebraic Data Type (ADT)
 A kind of composite type.
-Contains two types: Sum Type, Product Type
+
+Contains 2 types:
+
+<*>Sum Type
+Product Type<>
 
 
 ### Algebraic Data Type - Sum Type
 An item is a variation of something. It is one of a limited set.  A is a B or A is a C (variants).
-eg: User is logged in OR anonymous
 
+eg: User is logged in OR anonymous
+eg: Rust - Enum Types With Data
+eg: TypeScript - Union Type
 
 ### Algebraic Data Type - Product Type 
 An item contains one or more items. A has a B and a C (contains fields).
+
 eg: Logged in user has email address AND name.
+eg: Rust - Struct
 
 
 ### Algorithm
@@ -1879,7 +1991,11 @@ Relates to: Domain Driven Design
 A brownfield project / application is one that is developed in the presence of an existing (legacy) system/project/application. The new application must take into account and work with the system already in place.
 
 
+
 ### Business Process Manager
+
+Wiki:
+<l>https://en.wikipedia.org/wiki/Business_process_management<>
 
 
 ### Byte Order (Numeric)
@@ -2042,6 +2158,14 @@ A persistency pattern that allows information to be saved one way but read a dif
 USE WITH CAUTION: Many apps have gotten into trouble implementing this poorly. CRUD is more reliable for the majority of uses.
 
 
+
+### Command Language
+A language that is used to manage jobs and processes on a system.
+
+Example: <l>Bash<>
+
+
+
 ### Comments
 
 
@@ -2089,6 +2213,10 @@ The use of programming convention to set up classes over the use of configuratio
 ### Covariant
 This implies that two classes are linked. A subclass or subtype. is covariant with its superclass or supertype.
 See also: Invariant, Liskov Substitution, Subtype Polymorphism (OO.Help)
+
+Also See: <l "?q=vaniance">Variance<>
+@
+@ variance, variant
 
 
 ### Cross-origin Resource Sharing (CORS)
@@ -2178,6 +2306,49 @@ Problems:
 A single unified schema is impractical for anything but small organizations.
 The schema forces the creation of data models for each form of the data.
 Analytics requires each analysis to use it's own data model for every model.
+
+
+### Data Types - Dynamically Typed
+Variable types are declared and can only be known at run time.
+
+Examples: Python, Clojure
+@
+@ dynamicly, runtime
+
+
+
+### Data Types - Statically Typed
+Variable types are declared and known at compile time.
+
+Examples: C, Rust, Java
+@
+@ staticly
+
+
+
+### Data Types - Strongly Typed
+Enforces strict rules on what data types can be assigned to a variable.
+
+Examples: Rust, Erlang
+@
+@ staticly
+
+
+
+### Data Types - Weakly Typed
+Does not enforce what data types are assigned to a variable.
+
+Examples: JavaScript
+@
+@ staticly
+
+
+
+### Data Types - Stringly Typed
+A function or even program that passes values through strings.
+
+These should be converted to their proper types and passed in data structures.
+
 
 
 ### Database Normalization
@@ -2291,6 +2462,11 @@ If it walks like a duck and quacks like a duck, it is a duck.
 Duck typing states that if the method exists, the object supports that action and you can invoke it.
 There is no type checking to see if the object type or superclass explicitly supports that method.
 This is typically used in dynamic languages.
+
+
+
+### Edge Computing
+Edge computing puts the servers processing information as close as possible to the end users to reduce latency.
 
 
 ### Edit in Place
@@ -2528,6 +2704,15 @@ Favour aggregation over inheritance.
 Here is a gorilla  🦍
 
 
+### Grammar
+A set of rules that defines the syntax rules for a language, the structure of a phrases.
+
+
+### Island Grammar
+A set of grammar rules that applies to a piece of the input but is different to the main grammar rules for the input.
+Implemented using Lexer Modes
+
+
 ### Greenfield
 A greenfield project or application is one that has no constraints imposed by prior work.
 See Also: Brownfield
@@ -2572,8 +2757,10 @@ Used by Play / Lightbend, others.
 Embedded hyperlinks to resources in API results (usually in JSON or XML). This makes APIs self documenting, explorable and discoverable. Embeds '_links' element in data.
 
 
-### Imperative Programming
-Programming that does computations based on state changes (object action). It defines a sequence of commands to perform an action. It is the opposite of declarative programming.
+### Hypermedia as the Engine of Application State (HATEOS)
+Allows dynamic site navigation by returning valid API calls in the response.
+
+Wiki: <l https://en.wikipedia.org/wiki/HATEOAS>HATEOS<>
 
 
 ### Idempotent
@@ -2583,14 +2770,31 @@ Example:
 http PUT request on an object will not create multiple new elements. Just the one.
 
 
+### Imperative Programming
+Programming that does computations based on state changes (object action). It defines a sequence of commands to perform an action. It is the opposite of declarative programming.
+
+
 ### Integration Testing
 Tests one or more components together. It verifies that components work together correctly.
 See: Testing.Help
 
 
+### Internationalization and Localization (i18n / L10n)
+The process of adapting programs to different languages and regions without having to change the programs themselves.
+
+Wiki: <l https://en.wikipedia.org/wiki/Internationalization_and_localization>Internationalization and Localization<>
+
+
 ### Invariant
-Two classes are not variants of each other. Neither class is a subclass / subtype or superclass / supertype of each other.
+When two classes are not variants (supertype or subtype) of each other.
+
+Neither class is a subclass / subtype or superclass / supertype of each other.
+
 Ex: List <String>, List <Map>.	// Both are lists but they are invariant to each other.
+
+Also See: <l "?q=vaniance">Variance<>
+@
+@ variance, variant
 
 
 ### Inversion of Control
@@ -2656,6 +2860,16 @@ e.g. Html, Emacs Lisp.
 A computer language that is broadly applicable across many domains and lacks specialized features for a particular domain.
 
 
+### Lexer
+Also called a tokenizer. Takes individual characters and transforms them into tokens.
+@
+@ tokenizer
+
+
+### Lexer - Token
+The smalest unit created by a lexer while processing text.
+
+
 ### Lines of Code
 
 Car - High End - 100,000,000
@@ -2683,6 +2897,11 @@ Windows (Vista) - 50,000,000
 Windows (7) - 39,500,000
 
 
+
+### Lint / Linter
+A static code analyzer that finds errors and bugs, checks for style correctness and reports unusual or undesirable code.
+
+
 ### Liveness
 The outcome that a task eventually completes.
 
@@ -2691,12 +2910,16 @@ The outcome that a task eventually completes.
 A failure of a task to finish. Ex: a task that gets caught in an infinite loop.
 
 
-### Liskov Substitution
+### Liskov Substitution (Subtype Polymorphism)
 Concerns variance, covariance and invariance. Basically objects should be replaceable with their subclasses without altering correctness. 
 
 Example: A square seems like a good subclass of rectangle. However setting width and height properties makes no sense for a square as changing one will change the other. Therefore square and rectangle are invariants and fails Liskov Substitution.
 
 Also called: Subtype Polymorphism
+
+Also See: <l "?q=vaniance">Variance<>
+@
+@ variance, variant
 
 
 ### Listen, Understand, Decision, Action (LUDA)
@@ -2816,12 +3039,18 @@ A language feature that lets a program define a public interface but hides the i
 
 ### Modulo
 Calculates the remainder after division (usually denoted by %).
+"The modulo of 2 numbers"
 
-5 Modulus 3:
+
+Modulo - The Operator
+Modulus (noun) - The Divisor
+
+5 Modulo 3:
 
 <card>5 % 3 = 2<>
 @
-@ modulus
+@ modulus, remainder
+
 
 ### Monad
 Monads are features of functional programs that handle exception values when processing values through a chain of functions.
@@ -2970,6 +3199,66 @@ Arguments:
 
 <cb><v>test<> (<v>1<>, "<v>a string argument.<>");<>
 
+
+### Parser
+Takes tokens and places them into a structured tree called a Parse Tree or Syntax Tree
+
+
+### Parse Tree
+The structured tree of tokens, the result of the Antlr code. It is generated by running a list of tokens through the Parser.
+
+Also called: Syntax Tree
+@
+@ syntax tree
+
+
+### Passwords
+
+Bad passwords:
+
+<*>8 Characters or Less (should be considered completely breakable)
+No Special Characters
+Dictionary Hackable Passwords (contains common words)
+Passwords Base on Personal Information<>
+
+Good Passwords:
+
+<*>Long (long is better than complex)
+Must use interesting or special characters.
+Should be hard to break with a dictionary attack (choose uncommon words).
+Should be easy to remember.<>
+
+How To Pick a Good Password:
+
+- Pick 3 uncommon or made up words that you can easily remember.
+- Insert a special character in one of the words.
+- Capitalize the first word (to help with picky password requirements).
+
+Examples:
+Olives_marbles shepherd
+Highways@footwear compose
+
+
+
+### Password - Dos
+
+Include "Show Password While Typing"
+Allow "Paste Password"
+Check Password Against "Blacklist" of Dictionary Words, Repeat Strings, Compromised Passwords.
+No Password Hints
+Limit Password Attempts
+Use Multi-factor Authentication (MFA)
+
+
+### Passwords - Periodic Reset
+
+This is a bad practice and tends to make security worse.
+
+People have difficulty remembering one password.
+Forcing password changes tends to lead to predictable password patterns (easy to break if hacker has original).
+
+
+
 ### Pickling
 Converting an object hierarchy into a byte stream. Unpickling is the inverse operation converting a byte stream back into an object hierarchy.
 
@@ -2983,6 +3272,15 @@ Named - Also called a FIFO. Can last indefinitely. Usually created as a file tha
 
 ### Poison Pill
 A value placed in a queue to let a downstream listener know the queue is done.
+
+
+### Polyfill
+A polyfill is code that implements some feature that is missing in some browsers so a web page can run correctly.
+
+In web browsers, older browsers often do not support or have implementations important features added into JavaScript since their release. To get around this, developers can include polyfill code in their javascript to fill the gaps.
+
+eg. A polyfiller would replace a HTML 5 feature in a browser that didn't support HTML 5.
+
 
 
 ### Polyglot
@@ -3200,13 +3498,44 @@ eg: Python shell.
 Also called: Interactive Top-level
 
 
+#### Reserved Word vs Keyword vs Key Word
+
+Reserved Word / Reserved Identifier:
+
+<*>A word that cannot be used as an identifier.<>
+
+Keyword:
+
+<*>A word that has a special meaning.
+Not strictly disallowed as an identifier.
+Often used interchangeably with Reserved Word.<>
+
+Key Word:
+
+<*>Has no significance in programming terms.<>
+
+
+### Resource Acquisition Is Initialization (RAII)
+This simply means the constructor aquires a resource, the destructor releases it.
+
+(yes, RAII is a terrible name)
+
+Example - Rust Language:
+Rust enforces this. So when a resource goes out of scope, it's destructor is called and the resource is released.
+
+
+
 ### Responsive Design
 A web design approach that aims to provide an easy to read and navigation experience.
 Should require a minimum of resizing, panning and scrolling across a wide range of devices (monitors to mobile phones).
+@
+@ ui, ux, @media, css, web layouts
 
 
 ### Responsive Design - Mobile First
 Design philosophy that states start with mobile first layouts and work outwards to full screen desktop.
+@
+@ ui, ux, @media, css, web layouts
 
 
 ### REST (Representational State Transfer)
@@ -3366,13 +3695,6 @@ The process of storing immutable strings in a space saving way.
 
 
 
-### Stringly Typed
-A function or even program that passes values through strings.
-
-These should be converted to their proper types and passed in data structures.
-
-
-
 ### Super Exponentially
 N^N^N^N...
 
@@ -3389,6 +3711,18 @@ Often new or updated code will affect other areas in the code. These other areas
 See also: Testing.Help
 
 
+### Threads - Green / Concurrent Threads
+A thread that runs concurrently (not true parallel) and is controlled by program.
+
+Multiple green threads will run concurrently on a single native thread.
+
+
+
+### Threads - Native / OS Thread
+A thread that runs in parallel and is controlled by the operating system.
+
+
+
 ### Time Complexity
 Describes the runtime complexity of an algorithm in mathematical terms.
 
@@ -3396,6 +3730,13 @@ Describes the runtime complexity of an algorithm in mathematical terms.
 Wikipedia: <l>https://en.wikipedia.org/wiki/Time_complexity<>
 
 See Also: Big Oh Notation
+
+
+### Transpile
+Converts source code into source code.
+
+In JavaScript, it is very common to compile a never version of JavaScript into an older version for compatability. New features will be converted and implemented using the older code only (eg Transpiling EcmaScript 2015 into EcmaScript 3).
+
 
 
 ### Traumatropism
@@ -3415,6 +3756,7 @@ Must be able to do everything a Turing Machine can do.
 
 ### Turing Machine
 Infinite piece of tape with a read/write head that goes over the marks on the tape. The ability to read and write patterns of 0s and 1s is powerful enough to compute anything that is computable.
+
 
 
 ### Unit Testing
@@ -3489,5 +3831,17 @@ A service pack release. Correct specific problems. Do not introduce new features
 e.g.	1.1.1
 
 @ Dot-X-Dot-Y, Service Pack
+
+
+### Web Site - Hydration
+
+The adding of JavaScript event handlers to HTML in the browser after a static or rendered page is delivered.
+
+Why:
+Static content allows for fast loading into the browser.
+If js can't run, the page is already fully rendered (first paint).
+
+Wiki:
+<l>https://en.wikipedia.org/wiki/Hydration_(web_development)<>
 
 

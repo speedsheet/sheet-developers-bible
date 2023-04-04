@@ -475,6 +475,160 @@ Type: Tool Abuser
 
 
 
+# Database
+@
+@ database-only, db-only
+
+
+### Database Naming Conventions
+Depends on the database. Microsoft Sql Server favors <b>TitleCase<> for table and column names. MySql favours <b>snake_case<>.
+@
+@ table, column
+
+
+
+### Database Normalization
+The process of organizing a relational database to minimize data redundancy. There are different types from 1st normal form to 6th normal form and some extras. The higher the normal form, the more restrictions there are.
+
+
+
+### Database Normalization - 1st Normal Form
+All attributes are atomic (one attribute per field, no groups of values in one field).
+All records must have the same number of fields
+Every row should be unique	 (needs primary key)
+
+
+
+### Database Normalization - 2nd Normal Form
+Obey 1st Normal Form
+No partial key dependencies. A non key field must provide a fact about the key, the whole key and nothing but the key.
+
+Example: An item in a warehouse…
+Record details of a Warehouse Item in a record...
+
+- Take Warehouse Item -> Address.
+- Is a violation because...
+- Address is really a detail of Warehouse.
+- Which is only a subset of the Warehouse Item key.
+
+- Take Warehouse Item -> Count.
+- This is correct.
+- The Count relates directly to the Warehouse Part.
+
+"Every non key attribute is fully dependent on the primary key"
+
+
+
+### Database Normalization - 3rd Normal Form
+Obeys 2nd Normal Form
+
+- All non key attributes are not dependent on any other non-key attributes.
+- There should be no fields that do not relate directly to the key.	
+
+Ex: Teacher id, and teacher data living in a student-course table.
+- The teacher id con be there but the teacher data belongs in another table.
+
+
+
+### Database - Delete - Hard Delete
+To permanently delete a record from the database.
+
+
+
+### Database - Delete - Soft Delete
+Mark a database record for deletion or prevent it from being selected.
+Anti-Pattern: Don't do
+- Would need to include isDeleted = False in every query.
+- Issues with re-adding records.
+Opposite: Hard Delete
+
+
+
+### Database - Implicit Schema
+The schema of the data is not defined explicitly but implicitly. eg: JSON field in Postgres or MongoDB.
+If the schema is not explicit, it is always implicit.
+
+
+
+### Database - Join
+Combines data from two sets of data (tables).
+
+<image "database-joins.pngn">
+@
+@ joins
+
+
+
+### Database - Join Types
+Inner, Left Outer, Right Outer, Full Outer, Cross
+- Ansi Standard Definition
+
+
+
+### Database - Join - Cross
+Returns a cartesian product of the rows.
+Each row in the first table joins with each row in the second table.
+
+
+
+### Database - Join - Natural
+Join rows from table one and table two where they match on the join column.
+The different between a natural join and an inner join is the number of columns returned.
+Natural joins returns the common column once where as an inner joins will return it twice.
+- (column_1, column_join, column_3) vs (a.column_1, a.column_join, b.column_join, b.column_3)
+
+
+
+### Database - Join - Inner
+Gets all records from one table that have some related entry in a second table.
+"show me all students with lockers"
+
+
+
+### Database - Join - Left Outer
+Get all the records from the left table.
+Get matching records from the right table.
+Any left records with no right records will have nulls in the right record columns.
+"show me all students, with their corresponding locker if they have one"
+
+
+
+### Database - Join - Right Outer
+Get all the records from the right table.
+Get matching records from the left table.
+Any right records with no left records will have nulls in the left record columns.
+"show me all lockers, and the students assigned to them if there are any"
+
+
+
+### Database - Join - Full Outer
+Get all the records from both tables.
+Put NULL in the columns where the related records do not exist in the opposite table.
+"show me all students and all lockers, and match them up where you can"
+
+
+
+### Database - Junction Table
+- Joins two tables in a 3rd table.
+- For many to many relationships that can't be mapped directly from one table to the other.
+
+Aliases: Bridge Table, mapping table...
+
+
+
+### Database -  Shard
+A small manageable part of a database, a database partition.
+A database shard will contain a subset of the rows in an entire dataset (horizontal partitioning).
+See also: Sharding
+
+
+
+### Database - Sharding
+A type of database partitioning that separates very large databases into smaller, faster more manageable parts.
+Data is partitioned horizontally.
+
+
+
 # Documentation
 
 
@@ -920,6 +1074,9 @@ CPU and GPU Intensive
 Process Groups of Pictures Together
 Supports MP4, M4P, M4V<>
 
+<*>Compresses using Macroblocks
+4x4 to 16x16 Pixel Blocks<>
+
 
 Wiki:
 <l>https://en.wikipedia.org/wiki/Advanced_Video_Coding<>
@@ -931,6 +1088,13 @@ Wiki:
 
 ### H.265 / HEVC (High Efficiency Video Coding)
 
+<*>Uses Coding Tree Units (CTUs)
+Blocks up to 64x64
+Motion Compensation
+Spatial Prediction<>
+
+Size: 50% of H.264 Compression
+Quality: = H.264
 
 Wiki:
 <l>https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding<>
@@ -1121,6 +1285,51 @@ iPhone 6 - Camera Rear		3264 x 2448		8 mp		4:3
 
 Code Base Sizes (2014):
 <image "Chart - Code Base Sizes.png">
+@
+@ size
+
+
+
+## Lines of Code - Google
+
+2021, estimate: 2 billion lines
+@
+@ size
+
+
+
+## Lines of Code - Facebook
+
+2021, estimate : 61 million lines
+@
+@ size
+
+
+
+## Lines of Code - Linux
+
+Kernel (2020): 27.8 million lines
+
+systemd (2020): 450 thousand lines
+@
+@ size
+
+
+
+## Lines of Code - Human Genome
+
+Chromosomes:		23 Pairs
+Base Pairs:			3.1 Billion Base Pairs
+Letters:			6.2 Billion
+
+Letters:			A | T | C | G
+Pairs:				AT | TA | CG | GC
+
+1 Letter:			1 Bit
+1 Pair:				2 Bits
+Entire Genome:		750 MB
+@
+@ size
 
 
 
@@ -1590,6 +1799,10 @@ Role-based Access Control
 Resilient Distributed Datasets
 
 
+#### RDBMS
+Relational Database Management System
+
+
 #### REPL
 Read Evaluate Print Loop
 
@@ -2038,6 +2251,9 @@ States that it is impossible for a distributed database to guarantee all three o
 In reality, when there are partitions, you must choose on a spectrum between consistency or availability in the event of a failure. With no failure, you can have both consistency and availability.
 
 
+<image "database-cap-theorem.jpg">
+
+
 <b>Consistency<>
 Every read receives the most recent write or an error.
 
@@ -2048,13 +2264,13 @@ Every request receives a response. Does not guarantee that it contains the most 
 The system continues to operate despite arbitrary network partitioning/split due to network failures.
 
 Also Called: Brewer's Theorem.
-
+@
 @ Brewers
 
 
 ### Case
 Defines forms of uppercase, lower case letters in words and the word separators as used in programming.
-
+@
 @ Text, Word
 
 
@@ -2351,45 +2567,6 @@ These should be converted to their proper types and passed in data structures.
 
 
 
-### Database Normalization
-The process of organizing a relational database to minimize data redundancy. There are different types from 1st normal form to 6th normal form and some extras. The higher the normal form, the more restrictions there are.
-
-
-### Database Normalization - 1st Normal Form
-All attributes are atomic (one attribute per field, no groups of values in one field).
-All records must have the same number of fields
-Every row should be unique	 (needs primary key)
-
-
-### Database Normalization - 2nd Normal Form
-Obey 1st Normal Form
-No partial key dependencies. A non key field must provide a fact about the key, the whole key and nothing but the key.
-
-Example: An item in a warehouse…
-Record details of a Warehouse Item in a record...
-
-- Take Warehouse Item -> Address.
-- Is a violation because...
-- Address is really a detail of Warehouse.
-- Which is only a subset of the Warehouse Item key.
-
-- Take Warehouse Item -> Count.
-- This is correct.
-- The Count relates directly to the Warehouse Part.
-
-"Every non key attribute is fully dependent on the primary key"
-
-
-### Database Normalization - 3rd Normal Form
-Obeys 2nd Normal Form
-
-- All non key attributes are not dependent on any other non-key attributes.
-- There should be no fields that do not relate directly to the key.	
-
-Ex: Teacher id, and teacher data living in a student-course table.
-- The teacher id con be there but the teacher data belongs in another table.
-
-
 ### Declarative Programming
 A form of programming that expresses what the programming should do, not how to do it.
 
@@ -2462,7 +2639,6 @@ If it walks like a duck and quacks like a duck, it is a duck.
 Duck typing states that if the method exists, the object supports that action and you can invoke it.
 There is no type checking to see if the object type or superclass explicitly supports that method.
 This is typically used in dynamic languages.
-
 
 
 ### Edge Computing
@@ -2553,11 +2729,9 @@ Calculate:
 	project standard deviation = square root (sum (standard deviation ^ 2))
 
 
-
 ### Estimate - Computer Vision - 1966 Summer Project
 
 In 1966 Seymour Papert though computer vision would be a 'summer project' for some students. It wasn't...
-
 
 
 ### Event Sourcing
@@ -2575,10 +2749,14 @@ Command, Event, Query
 
 ### Eventual Consistency (BASE)
 States that access to a piece of data in a distributed system will eventually return the latest value. This is true as long as there are no new updates. A system that has reached consistency is said to have 'converged'. This is a weak guarantee.
-In contrast to ACID/RDBMS.
-Uses: Optimistic Replication
-Also Called: BASE (Basically Available, Soft State, Evaluate Consistency)
 
+In contrast to ACID/RDBMS.
+
+Uses: Optimistic Replication
+
+Also Called: BASE (Basically Available, Soft State, Evaluate Consistency)
+@
+@ database, db
 
 
 ### Extended Backus-Naur Form (EBNF)
@@ -2702,6 +2880,13 @@ Favour aggregation over inheritance.
 
 ### Gorilla
 Here is a gorilla  🦍
+
+
+### Graph Database
+Uses graph structures (nodes and edges) to define relationships between data items.
+It is very fast for returning queries based or relationships.
+@
+@ database, db
 
 
 ### Grammar
@@ -3125,16 +3310,25 @@ Line Feed + Carriage Return
 
 
 ### NOSql
-From short hashtag for meeting #nosql. Has no official meaning. Unofficially called Not Only Sql.
+Unofficial: Not Only SQL
+
+A database that is different from normal relational tabular databases.
+Originally meant 'non SQL' or 'non relational'
+
+Has no official meaning.
+@
+@ database, db
 
 
 ### NoSql Database Types
 BigTable, Document Database, Key Value Stores, Graph Database
+@
+@ database, db
 
 
 ### Nonce
 Number Used Once. (? ->) A token used to grant access to a server after authentication.
-
+@
 @ Nounce
 
 
@@ -3182,7 +3376,6 @@ Programming in pairs.
 Roles: Navigator, Driver.
 
 
-
 ### Parameter vs Argument
 
 Parameters are the formal parameter.
@@ -3210,6 +3403,20 @@ The structured tree of tokens, the result of the Antlr code. It is generated by 
 Also called: Syntax Tree
 @
 @ syntax tree
+
+
+### Partition - Horizontal
+Splitting data by placing different rows into different tables.
+Ex: Splitting by zip code into Region_East, Region_West
+@
+@ db, database
+
+
+### Partition - Vertical
+Splitting data by placing different columns in different tables.
+Therefore a record would be split across multiple tables and each table would have fewer columns.
+@
+@ db, database
 
 
 ### Passwords
@@ -3387,10 +3594,6 @@ The Constructive Cost Model (COCOMO) is a procedural software cost estimation mo
 
 ### Provisioning
 Making something/some resource available.
-
-
-### Pure Function
-See: Function - Pure Function
 
 
 ### Quine
